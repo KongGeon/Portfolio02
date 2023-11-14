@@ -172,3 +172,25 @@ footer p {
   padding: 16px;
   text-align: center;
 }
+
+/* 홈 */
+.move-text-wrap {
+  display: flex;
+  align-items: center;
+  height: 130px;
+  background-color: #252525;
+}
+.move-text-wrap p {
+  color: #fff;
+  text-align: center;
+  font-family: Sandoll Press;
+  font-size: 61.088px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 5.498px;
+  text-transform: uppercase;
+}
+.move-text-wrap > * {
+  margin: 0 40px;
+}
