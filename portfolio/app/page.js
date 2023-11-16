@@ -1,95 +1,36 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import React, { useState, useEffect } from "react";
 
 export default function Home() {
+  const [marginLeft, setMarginLeft] = useState(0);
+
+  useEffect(() => {
+    // setInterval을 이용하여 1초마다 실행되는 함수 생성
+    const moveElements = setInterval(() => {
+      // 현재 marginLeft 값을 가져와서 10px 증가
+      setMarginLeft((prevMarginLeft) => prevMarginLeft + 5);
+    }, 100);
+
+    // 컴포넌트가 언마운트될 때 clearInterval을 호출하여 메모리 누수 방지
+    return () => clearInterval(moveElements);
+  }, []); // 빈 배열을 넣어 useEffect가 최초 한 번만 실행되도록 함
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      <div className="move-text-wrap">
+        <div style={{ transform: `translate(-${marginLeft}px)` }}>
+          <p>uiux</p>
+          <img src="/img_dia.svg" alt="" />
+          <p>Web standards</p>
+          <img src="/img_dia.svg" alt="" />
+          <p>DESIGN</p>
+          <img src="/img_dia.svg" alt="" />
+          <p>development</p>
+          <img src="/img_dia.svg" alt="" />
+          <p>markup</p>
+          <img src="/img_dia.svg" alt="" />
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }

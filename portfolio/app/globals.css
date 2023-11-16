@@ -175,10 +175,15 @@ footer p {
 
 /* 홈 */
 .move-text-wrap {
-  display: flex;
-  align-items: center;
   height: 130px;
   background-color: #252525;
+  overflow: hidden;
+}
+.move-text-wrap > div {
+  display: flex;
+  align-items: center;
+  transition: all 1s;
+  height: 100%;
 }
 .move-text-wrap p {
   color: #fff;
@@ -191,6 +196,6 @@ footer p {
   letter-spacing: 5.498px;
   text-transform: uppercase;
 }
-.move-text-wrap > * {
+.move-text-wrap > div > * {
   margin: 0 40px;
 }

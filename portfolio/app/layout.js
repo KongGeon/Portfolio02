@@ -16,14 +16,14 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <header>
           <div className="header__left">
-            <Link href="">
+            <Link href="/">
               <img src="/img_logo.svg" alt="로고" />
             </Link>
           </div>
           <div className="header__right">
             <img src="/img_circle.svg" alt="" />
             <div>
-              <Link href="/sanggeon/home">HOME</Link>
+              <Link href="/">HOME</Link>
               <Link href="/sanggeon/story">STORY</Link>
               <Link href="/sanggeon/portfolio">Portfolio</Link>
               <Link href="javascript:void(0)">contact</Link>
