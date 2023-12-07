@@ -51,6 +51,11 @@ ul,
 ol {
   list-style: none;
 }
+
+:root {
+  --main: #f2d556;
+  --black: #252525;
+}
 /* cyrillic-ext */
 @font-face {
   font-family: "Source Serif Pro";
@@ -155,13 +160,13 @@ header {
 .s__container {
   margin-left: 50px;
   border-left: 1px solid #242424;
-  min-height: calc(100vh - 61px);
+  height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .s__contents {
-  max-height: calc(100vh - 115px);
+  height: calc(100vh - 118px);
   overflow: auto;
 }
 footer {
@@ -172,30 +177,23 @@ footer p {
   padding: 16px;
   text-align: center;
 }
-
-/* 홈 */
-.move-text-wrap {
-  height: 130px;
-  background-color: #252525;
-  overflow: hidden;
-}
-.move-text-wrap > div {
+.cuser-pointer {
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
-  transition: all 1s;
-  height: 100%;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 100px;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+  cursor: none;
 }
-.move-text-wrap p {
-  color: #fff;
-  text-align: center;
-  font-family: Sandoll Press;
-  font-size: 61.088px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 5.498px;
-  text-transform: uppercase;
-}
-.move-text-wrap > div > * {
-  margin: 0 40px;
+.swiper_link {
+  cursor: none;
 }

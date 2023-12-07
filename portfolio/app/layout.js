@@ -26,8 +26,8 @@ export default function RootLayout({ children }) {
               <Link href="/">HOME</Link>
               <Link href="/sanggeon/story">STORY</Link>
               <Link href="/sanggeon/portfolio">Portfolio</Link>
-              <Link href="javascript:void(0)">contact</Link>
-              <Link href="javascript:void(0)">SIGN IN</Link>
+              <Link href="">contact</Link>
+              <Link href="">SIGN IN</Link>
             </div>
             <img src="/img_circle.svg" alt="" />
           </div>

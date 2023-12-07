@@ -1,0 +1,121 @@
+/* 홈 */
+.move-text-wrap {
+  height: 130px;
+  background-color: #252525;
+  overflow: hidden;
+}
+.move-text-wrap > div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.move-text-wrap > div img {
+  transition: all 1s;
+}
+.move-text-wrap > div > * {
+  margin: 0 40px;
+}
+.main-contents {
+  display: flex;
+  height: 100%;
+}
+.main-contents > div {
+  position: relative;
+  height: calc(100vh - 248px);
+  width: 50%;
+}
+.main-contents__left {
+  border-right: 1px solid #242424;
+  height: 100%;
+}
+.main-contents__left * {
+  cursor: none;
+}
+.main-contents__left-title {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+  position: absolute;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+  z-index: 2;
+}
+.main-contents__right {
+  height: 100%;
+}
+.main-contents__right > div {
+  height: 50%;
+}
+.main-contents__right-top {
+  background-color: var(--main);
+  padding: 32px;
+}
+.main-contents__right-top h2 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.main-contents__right-top span {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 36px;
+  display: block;
+}
+.contents-title {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+  margin-bottom: 40px;
+}
+.main-contents__right-bottom {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.main-contents__right-bottom video {
+  width: 100%;
+}
+.btn-bk {
+  padding: 8px 42px;
+  background-color: var(--black);
+  color: #fff;
+  display: inline-flex;
+}
+.btn-bk img {
+  margin-left: 4px;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  display: none;
+}
+.swiper-button-prev {
+  width: 48px;
+  height: 48px;
+  background: url(/icon_swiper_left.svg);
+  transition: all 0.3s;
+}
+.swiper-button-prev:hover {
+  background: url(/icon_swiper_left_hover.svg);
+}
+.swiper-button-next {
+  width: 48px;
+  height: 48px;
+  background: url(/icon_swiper_right.svg);
+  transition: all 0.3s;
+}
+.swiper-button-next:hover {
+  background: url(/icon_swiper_right_hover.svg);
+}
+.swiper-slide img {
+  height: 100%;
+  object-fit: cover;
+}
