@@ -1,3 +1,6 @@
+@charset "utf-8";
+@import url(./font.css);
+
 /* reset */
 
 * {
@@ -127,6 +130,7 @@ ol {
 /* 공통 */
 body {
   background: var(--BG, #e7e4de);
+  font-family: "Pretendard", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 header {
   border-bottom: 1px solid #242424;
@@ -145,9 +149,6 @@ header {
   justify-content: space-between;
   padding: 18px 24px;
 }
-.header__right a + a {
-  margin-left: 32px;
-}
 .header__right a {
   font-family: Source Serif Pro;
   font-size: 14px;
@@ -156,6 +157,8 @@ header {
   line-height: 16px; /* 114.286% */
   letter-spacing: 1.4px;
   text-transform: uppercase;
+  padding: 14px 16px;
+  border-radius: 4px;
 }
 .s__container {
   margin-left: 50px;
@@ -177,7 +180,11 @@ footer p {
   padding: 16px;
   text-align: center;
 }
-.cuser-pointer {
+.swiper-button-next,
+.swiper-button-prev {
+  cursor: none !important;
+}
+/* .cuser-pointer {
   width: 64px;
   height: 64px;
   display: flex;
@@ -196,4 +203,4 @@ footer p {
 }
 .swiper_link {
   cursor: none;
-}
+} */

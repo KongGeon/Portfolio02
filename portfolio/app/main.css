@@ -28,9 +28,9 @@
   border-right: 1px solid #242424;
   height: 100%;
 }
-.main-contents__left * {
+/* .main-contents__left * {
   cursor: none;
-}
+} */
 .main-contents__left-title {
   position: absolute;
   left: 32px;
@@ -102,6 +102,7 @@
   height: 48px;
   background: url(/icon_swiper_left.svg);
   transition: all 0.3s;
+  border-radius: 100%;
 }
 .swiper-button-prev:hover {
   background: url(/icon_swiper_left_hover.svg);
@@ -111,6 +112,7 @@
   height: 48px;
   background: url(/icon_swiper_right.svg);
   transition: all 0.3s;
+  border-radius: 100%;
 }
 .swiper-button-next:hover {
   background: url(/icon_swiper_right_hover.svg);

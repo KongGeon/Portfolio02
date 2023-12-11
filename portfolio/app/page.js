@@ -1,13 +1,15 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Navigation, A11y } from "swiper/modules";
+// swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import "swiper/swiper.min.css";
+import "swiper/components/navigation/navigation.min.css";
+import SwiperCore, { Navigation } from "swiper";
+
+// pointer
+import { initCursor } from "./Event/cursor";
+
 import "./main.css";
 
 export default function Home() {
@@ -28,7 +30,45 @@ export default function Home() {
     height: "100%",
   };
 
+  // 스와이퍼
+  const [swiper, setSwiper] = useState(null);
+  const [mainImageIndex, setMainImageIndex] = useState(0);
+
+  SwiperCore.use([Navigation]);
+
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
+
+  const swiperParams = {
+    navigation: {
+      prevEl: navigationPrevRef.current,
+      nextEl: navigationNextRef.current,
+    },
+    onBeforeInit: (swiper) => {
+      swiper.params.navigation.prevEl = navigationPrevRef.current;
+      swiper.params.navigation.nextEl = navigationNextRef.current;
+      swiper.activeIndex = mainImageIndex;
+      swiper.navigation.update();
+    },
+    onSwiper: setSwiper,
+    onSlideChange: (e) => setMainImageIndex(e.activeIndex),
+    style: swiperStyle,
+    spaceBetween: 50,
+    slidesPerView: 1,
+  };
+  // 스와이퍼
+
   useEffect(() => {
+    //마우스포인터
+    initCursor({
+      enableAutoTextCursor: true,
+      enableLighting: true,
+      blockStyle: {
+        radius: "auto",
+      },
+    });
+    //마우스포인터
+
     const interval = setInterval(() => {
       setMarginLeft((prevMarginLeft) => prevMarginLeft + 5);
     }, 100);
@@ -56,10 +96,6 @@ export default function Home() {
       clearInterval(imageInterval);
     };
   }, []);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const handleMouseMove = (e) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-  };
   return (
     <div>
       <div className="move-text-wrap">
@@ -75,26 +111,57 @@ export default function Home() {
         </div>
       </div>
       <div className="main-contents">
-        <div className="main-contents__left" onMouseMove={handleMouseMove}>
+        <div className="main-contents__left">
           <p className="main-contents__left-title">WORK DETAIL</p>
-          <Swiper
-            // install Swiper modules
-            style={swiperStyle}
-            modules={[Navigation, A11y]}
-            spaceBetween={50}
-            slidesPerView={1}
-            navigation
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-          >
+          <Swiper {...swiperParams} ref={setSwiper}>
             <SwiperSlide>
-              <Link href="#" className="swiper_link">
+              <Link
+                data-cursor="link"
+                href="https://www.naver.com/"
+                className="swiper_link"
+              >
                 <img src="/img_portfolio01.png" alt="" />
               </Link>
             </SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
+            <SwiperSlide>
+              <Link
+                data-cursor="link"
+                href="https://www.naver.com/"
+                className="swiper_link"
+              >
+                <img src="/img_portfolio02.png" alt="" />
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link
+                data-cursor="link"
+                href="https://www.naver.com/"
+                className="swiper_link"
+              >
+                <img src="/img_portfolio03.png" alt="" />
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link
+                data-cursor="link"
+                href="https://www.naver.com/"
+                className="swiper_link"
+              >
+                <img src="/img_portfolio04.png" alt="" />
+              </Link>
+            </SwiperSlide>
+            <a
+              href="#"
+              className="swiper-button-prev"
+              data-cursor="block"
+              ref={navigationPrevRef}
+            ></a>
+            <a
+              href="#"
+              className="swiper-button-next"
+              data-cursor="block"
+              ref={navigationNextRef}
+            ></a>
           </Swiper>
         </div>
         <div className="main-contents__right">
@@ -107,7 +174,11 @@ export default function Home() {
               하나로, 업무 내용을 빠르게 확인할 수 있는 게시판 형태로
               개발되었습니다.
             </span>
-            <Link href="" className="btn-bk">
+            <Link
+              className="btn-bk"
+              data-cursor="block"
+              href="https://www.naver.com/"
+            >
               STORY
               <img src="/icon_down_btn.svg" alt="스토리이동" />
             </Link>
@@ -118,16 +189,6 @@ export default function Home() {
             </video>
           </div>
         </div>
-      </div>
-      <div
-        className="cuser-pointer"
-        style={{
-          transform: `translate(${mousePosition.x - 34}px, ${
-            mousePosition.y - 34
-          }px)`,
-        }}
-      >
-        LINK
       </div>
     </div>
   );
