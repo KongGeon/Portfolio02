@@ -10,6 +10,8 @@ import SwiperCore, { Navigation } from "swiper";
 // pointer
 import { initCursor } from "./Event/cursor";
 
+import MainSwiperData from "./Components/MainSwiperData";
+
 import "./main.css";
 
 export default function Home() {
@@ -53,10 +55,24 @@ export default function Home() {
     onSwiper: setSwiper,
     onSlideChange: (e) => setMainImageIndex(e.activeIndex),
     style: swiperStyle,
-    spaceBetween: 50,
+    // spaceBetween: 50,
     slidesPerView: 1,
   };
   // 스와이퍼
+
+  // 스와이퍼 정보 더보기 버튼
+  const [swiperDataOpen, setSwiperDataOpen] = useState("main-portpolio-wrap");
+
+  function swiperOpen(e) {
+    // e.target.closest(".main-portpolio-wrap").classList.toggle("active-on");
+    if (swiperDataOpen === "main-portpolio-wrap") {
+      setSwiperDataOpen("main-portpolio-wrap active-on");
+    } else {
+      setSwiperDataOpen("main-portpolio-wrap");
+    }
+  }
+
+  // 스와이퍼 정보 더보기 버튼
 
   useEffect(() => {
     //마우스포인터
@@ -69,6 +85,7 @@ export default function Home() {
     });
     //마우스포인터
 
+    // 텍스트이동바
     const interval = setInterval(() => {
       setMarginLeft((prevMarginLeft) => prevMarginLeft + 5);
     }, 100);
@@ -95,7 +112,9 @@ export default function Home() {
       clearInterval(interval);
       clearInterval(imageInterval);
     };
+    // 텍스트이동바
   }, []);
+
   return (
     <div>
       <div className="move-text-wrap">
@@ -122,6 +141,19 @@ export default function Home() {
               >
                 <img src="/img_portfolio01.png" alt="" />
               </Link>
+              <div className={swiperDataOpen}>
+                <button onClick={swiperOpen}>
+                  <div data-cursor="block">
+                    <img src="/icon_down_arrow_w.svg" alt="열기" title="열기" />
+                  </div>
+                </button>
+                <MainSwiperData
+                  title="타이틀"
+                  skill={["REACT", "JQUERY", "DESIGN"]}
+                  date="2023.01 ~ 2023.05"
+                  per="100%"
+                ></MainSwiperData>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
               <Link
@@ -131,6 +163,19 @@ export default function Home() {
               >
                 <img src="/img_portfolio02.png" alt="" />
               </Link>
+              <div className={swiperDataOpen}>
+                <button onClick={swiperOpen}>
+                  <div data-cursor="block">
+                    <img src="/icon_down_arrow_w.svg" alt="열기" title="열기" />
+                  </div>
+                </button>
+                <MainSwiperData
+                  title="타이틀"
+                  skill={["REACT", "JQUERY", "DESIGN"]}
+                  date="2023.01 ~ 2023.05"
+                  per="100%"
+                ></MainSwiperData>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
               <Link
@@ -140,6 +185,19 @@ export default function Home() {
               >
                 <img src="/img_portfolio03.png" alt="" />
               </Link>
+              <div className={swiperDataOpen}>
+                <button onClick={swiperOpen}>
+                  <div data-cursor="block">
+                    <img src="/icon_down_arrow_w.svg" alt="열기" title="열기" />
+                  </div>
+                </button>
+                <MainSwiperData
+                  title="타이틀"
+                  skill={["REACT", "JQUERY", "DESIGN"]}
+                  date="2023.01 ~ 2023.05"
+                  per="100%"
+                ></MainSwiperData>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
               <Link
@@ -149,6 +207,19 @@ export default function Home() {
               >
                 <img src="/img_portfolio04.png" alt="" />
               </Link>
+              <div className={swiperDataOpen}>
+                <button onClick={swiperOpen}>
+                  <div data-cursor="block">
+                    <img src="/icon_down_arrow_w.svg" alt="열기" title="열기" />
+                  </div>
+                </button>
+                <MainSwiperData
+                  title="타이틀"
+                  skill={["REACT", "JQUERY", "DESIGN"]}
+                  date="2023.01 ~ 2023.05"
+                  per="100%"
+                ></MainSwiperData>
+              </div>
             </SwiperSlide>
             <a
               href="#"

@@ -121,3 +121,247 @@
   height: 100%;
   object-fit: cover;
 }
+.main-portpolio-wrap {
+  position: absolute;
+  bottom: calc(33px - 50%);
+  width: 100%;
+  height: 50%;
+  background: rgba(37, 37, 37, 0.7);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s;
+}
+.main-portpolio-wrap.active-on {
+  bottom: 0;
+}
+.main-portpolio-wrap > button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-portpolio-wrap > button > div {
+  border-radius: 4px;
+}
+.main-portpolio-wrap > button img {
+  transform: rotate(180deg);
+  transition: all 0.3s;
+}
+.main-portpolio-wrap.active-on > button img {
+  transform: rotate(0);
+}
+.main-swiper-contents {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px 64px;
+  color: #fff;
+}
+.portfolio-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.portpolio-skill {
+  display: flex;
+  margin-bottom: 40px;
+}
+.portpolio-skill p {
+  display: flex;
+  align-items: center;
+}
+.portpolio-skill p + p::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background: url(/icon_slash.svg) no-repeat;
+}
+.portpolio-data {
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+.portpolio-data li {
+  display: flex;
+  align-items: center;
+}
+.portpolio-data li + li {
+  margin-top: 8px;
+}
+.portpolio-data span {
+  display: block;
+  margin-right: 24px;
+  font-weight: 400;
+}
+.portpolio-data p {
+  font-weight: 700;
+}
+.portpolio-step-wrap {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.portpolio-step-wrap .circle {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-bottom: 8px;
+}
+.portpolio-step-wrap .step-bar {
+  position: absolute;
+  top: 2px;
+  margin: 0 4px 0 12px;
+  height: 1px;
+  width: calc(100% - 16px);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.portpolio-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+/* step1 */
+.portpolio-step-wrap.step1 .step01 .circle {
+  background-color: var(--main);
+}
+/* step2 */
+.portpolio-step-wrap.step2 .step02 .circle {
+  background-color: var(--main);
+}
+/* step3 */
+.portpolio-step-wrap.step3 .step03 .circle {
+  background-color: var(--main);
+}
+/* step4 */
+.portpolio-step-wrap.step4 .step04 .circle {
+  background-color: var(--main);
+}
+/* step5 */
+.portpolio-step-wrap.step5 .step05 .circle {
+  background-color: var(--main);
+}
+
+/* step1-2 */
+.portpolio-step-wrap.step1-2 .step01 .circle,
+.portpolio-step-wrap.step1-2 .step02 .circle {
+  background-color: var(--main);
+}
+.portpolio-step-wrap.step1-2 .step-bar-inner {
+  width: 25%;
+  height: 100%;
+  background-color: var(--main);
+}
+/* step1-3 */
+.portpolio-step-wrap.step1-3 .step01 .circle,
+.portpolio-step-wrap.step1-3 .step02 .circle,
+.portpolio-step-wrap.step1-3 .step03 .circle {
+  background-color: var(--main);
+}
+.portpolio-step-wrap.step1-3 .step-bar-inner {
+  width: 50%;
+  height: 100%;
+  background-color: var(--main);
+}
+/* step1-4 */
+.portpolio-step-wrap.step1-4 .step01 .circle,
+.portpolio-step-wrap.step1-4 .step02 .circle,
+.portpolio-step-wrap.step1-4 .step03 .circle,
+.portpolio-step-wrap.step1-4 .step04 .circle {
+  background-color: var(--main);
+}
+.portpolio-step-wrap.step1-4 .step-bar-inner {
+  width: 75%;
+  height: 100%;
+  background-color: var(--main);
+}
+/* step1-5 */
+.portpolio-step-wrap.step1-5 .step01 .circle,
+.portpolio-step-wrap.step1-5 .step02 .circle,
+.portpolio-step-wrap.step1-5 .step03 .circle,
+.portpolio-step-wrap.step1-5 .step04 .circle,
+.portpolio-step-wrap.step1-5 .step05 .circle {
+  background-color: var(--main);
+}
+.portpolio-step-wrap.step1-5 .step-bar-inner {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main);
+}
+
+/* step2-3 */
+.portpolio-step-wrap.step2-3 .step02 .circle,
+.portpolio-step-wrap.step2-3 .step03 .circle {
+  background-color: var(--main);
+}
+.portpolio-step-wrap.step2-3 .step-bar-inner {
+  width: 25%;
+  margin-left: calc(25% + 4px);
+  height: 100%;
+  background-color: var(--main);
+}
+/* step2-4 */
+.portpolio-step-wrap.step2-4 .step02 .circle,
+.portpolio-step-wrap.step2-4 .step03 .circle,
+.portpolio-step-wrap.step2-4 .step04 .circle {
+  background-color: var(--main);
+}
+.portpolio-step-wrap.step2-4 .step-bar-inner {
+  width: 50%;
+  margin-left: calc(25% + 4px);
+  height: 100%;
+  background-color: var(--main);
+}
+/* step2-5 */
+.portpolio-step-wrap.step2-5 .step02 .circle,
+.portpolio-step-wrap.step2-5 .step03 .circle,
+.portpolio-step-wrap.step2-5 .step04 .circle,
+.portpolio-step-wrap.step2-5 .step05 .circle {
+  background-color: var(--main);
+}
+.portpolio-step-wrap.step2-5 .step-bar-inner {
+  width: calc(75% - 8px);
+  margin-left: calc(25% + 4px);
+  height: 100%;
+  background-color: var(--main);
+}
+/* step3-4 */
+.portpolio-step-wrap.step3-4 .step03 .circle,
+.portpolio-step-wrap.step3-4 .step04 .circle {
+  background-color: var(--main);
+}
+.portpolio-step-wrap.step3-4 .step-bar-inner {
+  width: 25%;
+  margin-left: calc(50% + 4px);
+  height: 100%;
+  background-color: var(--main);
+}
+/* step3-5 */
+.portpolio-step-wrap.step3-5 .step03 .circle,
+.portpolio-step-wrap.step3-5 .step04 .circle,
+.portpolio-step-wrap.step3-5 .step05 .circle {
+  background-color: var(--main);
+}
+.portpolio-step-wrap.step3-5 .step-bar-inner {
+  width: calc(50% - 8px);
+  margin-left: calc(50% + 4px);
+  height: 100%;
+  background-color: var(--main);
+}
+/* step4-5 */
+.portpolio-step-wrap.step4-5 .step04 .circle,
+.portpolio-step-wrap.step4-5 .step05 .circle {
+  background-color: var(--main);
+}
+.portpolio-step-wrap.step4-5 .step-bar-inner {
+  width: calc(25% - 8px);
+  margin-left: calc(75% + 4px);
+  height: 100%;
+  background-color: var(--main);
+}

@@ -25,6 +25,10 @@
   word-break: break-word;
   tab-size: 4;
 }
+body,
+* {
+  cursor: none !important;
+}
 html,
 body {
   height: 100%;
