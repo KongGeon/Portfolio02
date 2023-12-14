@@ -1,0 +1,298 @@
+@charset "utf-8";
+@import url(./font.css);
+
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+:root {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  cursor: default;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  tab-size: 4;
+}
+body,
+* {
+  cursor: none !important;
+}
+html,
+body {
+  height: 100%;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+:root {
+  --main: #f2d556;
+  --black: #252525;
+  --BG: #e7e4de;
+}
+
+*::-webkit-scrollbar {
+  /* //스크롤바 전체 */
+  width: 12px;
+  height: 12px;
+}
+*::-webkit-scrollbar-thumb {
+  /* //스크롤바 */
+  background-color: #585e8a4c;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourceserifpro/v17/neIXzD-0qpwxpaWvjeD0X88SAOeasasatSGqxLUv.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourceserifpro/v17/neIXzD-0qpwxpaWvjeD0X88SAOeasasatSiqxLUv.woff2)
+    format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourceserifpro/v17/neIXzD-0qpwxpaWvjeD0X88SAOeasasatS-qxLUv.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourceserifpro/v17/neIXzD-0qpwxpaWvjeD0X88SAOeasasatSOqxLUv.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
+    U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourceserifpro/v17/neIXzD-0qpwxpaWvjeD0X88SAOeasasatSKqxLUv.woff2)
+    format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourceserifpro/v17/neIXzD-0qpwxpaWvjeD0X88SAOeasasatSyqxA.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* reset */
+
+/* 공통 */
+body {
+  background: var(--BG, #e7e4de);
+  font-family: "Pretendard", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+header {
+  border-bottom: 1px solid var(--black);
+  padding-left: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.header__left {
+  border-right: 1px solid var(--black);
+  display: flex;
+  align-items: center;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 24px;
+}
+.header__left a {
+  border-radius: 4px;
+  padding: 8px;
+}
+.header__right a {
+  display: inline-block;
+  font-family: Source Serif Pro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  padding: 14px 16px;
+  border-radius: 4px;
+}
+.s__container {
+  margin-left: 49px;
+  border-left: 1px solid var(--black);
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.s__contents {
+  min-height: calc(100vh - 118px);
+  overflow: auto;
+}
+footer {
+  border-top: 1px solid var(--black);
+}
+footer p {
+  color: #74726f;
+  padding: 16px;
+  text-align: center;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  cursor: none !important;
+}
+
+.portfolio-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.portfolio-skill {
+  display: flex;
+  margin-bottom: 40px;
+}
+.portfolio-skill p {
+  display: flex;
+  align-items: center;
+}
+.portfolio-skill p + p::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background: url(/icon_slash.svg) no-repeat;
+}
+.portfolio-data {
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+.portfolio-data li {
+  display: flex;
+  align-items: center;
+}
+.portfolio-data li + li {
+  margin-top: 8px;
+}
+.portfolio-data span {
+  display: block;
+  margin-right: 24px;
+  font-weight: 400;
+}
+.portfolio-data p {
+  font-weight: 700;
+}
+.portfolio-step-wrap {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.portfolio-step-wrap .circle {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-bottom: 8px;
+}
+.portfolio-step-wrap .step-bar {
+  position: absolute;
+  top: 2px;
+  margin: 0 4px 0 12px;
+  height: 1px;
+  width: calc(100% - 16px);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.portfolio-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.contents-title {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin-bottom: 40px;
+}
+.btn-bk {
+  padding: 8px 42px;
+  background-color: var(--black);
+  color: #fff;
+  display: inline-flex;
+}
+.btn-bk img {
+  margin-left: 4px;
+}

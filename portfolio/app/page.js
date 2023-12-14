@@ -8,11 +8,11 @@ import "swiper/components/navigation/navigation.min.css";
 import SwiperCore, { Navigation } from "swiper";
 
 // pointer
-import { initCursor } from "./Event/cursor";
+import { initCursor, updateCursor } from "./Event/cursor";
 
 import MainSwiperData from "./Components/MainSwiperData";
 
-import "./main.css";
+import "./css/main.css";
 
 export default function Home() {
   const [marginLeft, setMarginLeft] = useState(0);
@@ -61,20 +61,22 @@ export default function Home() {
   // 스와이퍼
 
   // 스와이퍼 정보 더보기 버튼
-  const [swiperDataOpen, setSwiperDataOpen] = useState("main-portpolio-wrap");
+  const [swiperDataOpen, setSwiperDataOpen] = useState("main-portfolio-wrap");
 
   function swiperOpen(e) {
-    // e.target.closest(".main-portpolio-wrap").classList.toggle("active-on");
-    if (swiperDataOpen === "main-portpolio-wrap") {
-      setSwiperDataOpen("main-portpolio-wrap active-on");
+    // e.target.closest(".main-portfolio-wrap").classList.toggle("active-on");
+    if (swiperDataOpen === "main-portfolio-wrap") {
+      setSwiperDataOpen("main-portfolio-wrap active-on");
     } else {
-      setSwiperDataOpen("main-portpolio-wrap");
+      setSwiperDataOpen("main-portfolio-wrap");
     }
   }
 
   // 스와이퍼 정보 더보기 버튼
 
   useEffect(() => {
+    console.log("home");
+
     //마우스포인터
     initCursor({
       enableAutoTextCursor: true,
@@ -83,6 +85,7 @@ export default function Home() {
         radius: "auto",
       },
     });
+    updateCursor();
     //마우스포인터
 
     // 텍스트이동바
@@ -116,7 +119,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="home">
       <div className="move-text-wrap">
         <div>
           {images.map((image, index) => (

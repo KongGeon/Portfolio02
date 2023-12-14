@@ -1,0 +1,282 @@
+/* 홈 */
+.home .move-text-wrap {
+  height: 130px;
+  background-color: #252525;
+  overflow: hidden;
+}
+.move-text-wrap > div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.move-text-wrap > div img {
+  transition: all 1s;
+}
+.move-text-wrap > div > * {
+  margin: 0 40px;
+}
+.main-contents {
+  display: flex;
+  height: 100%;
+}
+.main-contents > div {
+  position: relative;
+  height: calc(100vh - 248px);
+  width: 50%;
+}
+.main-contents__left {
+  border-right: 1px solid var(--black);
+  height: 100%;
+}
+/* .main-contents__left * {
+  cursor: none;
+} */
+.main-contents__left-title {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+  position: absolute;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+  z-index: 2;
+}
+.main-contents__right {
+  height: 100%;
+}
+.main-contents__right > div {
+  height: 50%;
+}
+.main-contents__right-top {
+  background-color: var(--main);
+  padding: 32px;
+}
+.main-contents__right-top h2 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.main-contents__right-top span {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 36px;
+  display: block;
+}
+.main-contents__right-bottom {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.main-contents__right-bottom video {
+  width: 100%;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  display: none;
+}
+.home .swiper-button-prev {
+  width: 48px;
+  height: 48px;
+  background: url(/icon_swiper_left.svg);
+  transition: all 0.3s;
+  border-radius: 100%;
+}
+.home .swiper-button-prev:hover {
+  background: url(/icon_swiper_left_hover.svg);
+}
+.home .swiper-button-next {
+  width: 48px;
+  height: 48px;
+  background: url(/icon_swiper_right.svg);
+  transition: all 0.3s;
+  border-radius: 100%;
+}
+.home .swiper-button-next:hover {
+  background: url(/icon_swiper_right_hover.svg);
+}
+.swiper-slide img {
+  height: 100%;
+  object-fit: cover;
+}
+.main-portfolio-wrap {
+  position: absolute;
+  bottom: calc(33px - 50%);
+  width: 100%;
+  height: 50%;
+  background: rgba(37, 37, 37, 0.7);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s;
+}
+.main-portfolio-wrap.active-on {
+  bottom: 0;
+}
+.main-portfolio-wrap > button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-portfolio-wrap > button > div {
+  border-radius: 4px;
+}
+.main-portfolio-wrap > button img {
+  transform: rotate(180deg);
+  transition: all 0.3s;
+}
+.main-portfolio-wrap.active-on > button img {
+  transform: rotate(0);
+}
+.main-swiper-contents {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px 64px;
+  color: #fff;
+}
+
+/* step1 */
+.portfolio-step-wrap.step1 .step01 .circle {
+  background-color: var(--main);
+}
+/* step2 */
+.portfolio-step-wrap.step2 .step02 .circle {
+  background-color: var(--main);
+}
+/* step3 */
+.portfolio-step-wrap.step3 .step03 .circle {
+  background-color: var(--main);
+}
+/* step4 */
+.portfolio-step-wrap.step4 .step04 .circle {
+  background-color: var(--main);
+}
+/* step5 */
+.portfolio-step-wrap.step5 .step05 .circle {
+  background-color: var(--main);
+}
+
+/* step1-2 */
+.portfolio-step-wrap.step1-2 .step01 .circle,
+.portfolio-step-wrap.step1-2 .step02 .circle {
+  background-color: var(--main);
+}
+.portfolio-step-wrap.step1-2 .step-bar-inner {
+  width: 25%;
+  height: 100%;
+  background-color: var(--main);
+}
+/* step1-3 */
+.portfolio-step-wrap.step1-3 .step01 .circle,
+.portfolio-step-wrap.step1-3 .step02 .circle,
+.portfolio-step-wrap.step1-3 .step03 .circle {
+  background-color: var(--main);
+}
+.portfolio-step-wrap.step1-3 .step-bar-inner {
+  width: 50%;
+  height: 100%;
+  background-color: var(--main);
+}
+/* step1-4 */
+.portfolio-step-wrap.step1-4 .step01 .circle,
+.portfolio-step-wrap.step1-4 .step02 .circle,
+.portfolio-step-wrap.step1-4 .step03 .circle,
+.portfolio-step-wrap.step1-4 .step04 .circle {
+  background-color: var(--main);
+}
+.portfolio-step-wrap.step1-4 .step-bar-inner {
+  width: 75%;
+  height: 100%;
+  background-color: var(--main);
+}
+/* step1-5 */
+.portfolio-step-wrap.step1-5 .step01 .circle,
+.portfolio-step-wrap.step1-5 .step02 .circle,
+.portfolio-step-wrap.step1-5 .step03 .circle,
+.portfolio-step-wrap.step1-5 .step04 .circle,
+.portfolio-step-wrap.step1-5 .step05 .circle {
+  background-color: var(--main);
+}
+.portfolio-step-wrap.step1-5 .step-bar-inner {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main);
+}
+
+/* step2-3 */
+.portfolio-step-wrap.step2-3 .step02 .circle,
+.portfolio-step-wrap.step2-3 .step03 .circle {
+  background-color: var(--main);
+}
+.portfolio-step-wrap.step2-3 .step-bar-inner {
+  width: 25%;
+  margin-left: calc(25% + 4px);
+  height: 100%;
+  background-color: var(--main);
+}
+/* step2-4 */
+.portfolio-step-wrap.step2-4 .step02 .circle,
+.portfolio-step-wrap.step2-4 .step03 .circle,
+.portfolio-step-wrap.step2-4 .step04 .circle {
+  background-color: var(--main);
+}
+.portfolio-step-wrap.step2-4 .step-bar-inner {
+  width: 50%;
+  margin-left: calc(25% + 4px);
+  height: 100%;
+  background-color: var(--main);
+}
+/* step2-5 */
+.portfolio-step-wrap.step2-5 .step02 .circle,
+.portfolio-step-wrap.step2-5 .step03 .circle,
+.portfolio-step-wrap.step2-5 .step04 .circle,
+.portfolio-step-wrap.step2-5 .step05 .circle {
+  background-color: var(--main);
+}
+.portfolio-step-wrap.step2-5 .step-bar-inner {
+  width: calc(75% - 8px);
+  margin-left: calc(25% + 4px);
+  height: 100%;
+  background-color: var(--main);
+}
+/* step3-4 */
+.portfolio-step-wrap.step3-4 .step03 .circle,
+.portfolio-step-wrap.step3-4 .step04 .circle {
+  background-color: var(--main);
+}
+.portfolio-step-wrap.step3-4 .step-bar-inner {
+  width: 25%;
+  margin-left: calc(50% + 4px);
+  height: 100%;
+  background-color: var(--main);
+}
+/* step3-5 */
+.portfolio-step-wrap.step3-5 .step03 .circle,
+.portfolio-step-wrap.step3-5 .step04 .circle,
+.portfolio-step-wrap.step3-5 .step05 .circle {
+  background-color: var(--main);
+}
+.portfolio-step-wrap.step3-5 .step-bar-inner {
+  width: calc(50% - 8px);
+  margin-left: calc(50% + 4px);
+  height: 100%;
+  background-color: var(--main);
+}
+/* step4-5 */
+.portfolio-step-wrap.step4-5 .step04 .circle,
+.portfolio-step-wrap.step4-5 .step05 .circle {
+  background-color: var(--main);
+}
+.portfolio-step-wrap.step4-5 .step-bar-inner {
+  width: calc(25% - 8px);
+  margin-left: calc(75% + 4px);
+  height: 100%;
+  background-color: var(--main);
+}

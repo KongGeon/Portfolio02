@@ -1,9 +1,9 @@
-import "./globals.css";
+import "./css/globals.css";
 import Link from "next/link";
 
 export const metadata = {
-  title: "PORTPOLIO",
-  description: "SNAGGEON PORTPOLIO",
+  title: "PORTFOLIO",
+  description: "SNAGGEON PORTFOLIO",
 };
 
 export default function RootLayout({ children }) {
@@ -13,14 +13,14 @@ export default function RootLayout({ children }) {
       <body>
         <header>
           <div className="header__left">
-            <Link href="/">
+            <Link href="/sanggeon/home" data-cursor="block">
               <img src="/img_logo.svg" alt="로고" />
             </Link>
           </div>
           <div className="header__right">
             <img src="/img_circle.svg" alt="" />
             <div>
-              <Link data-cursor="block" href="/">
+              <Link data-cursor="block" href="/sanggeon/home">
                 HOME
               </Link>
               <Link data-cursor="block" href="/sanggeon/story">
