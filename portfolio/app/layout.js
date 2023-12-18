@@ -1,6 +1,6 @@
 import "./css/globals.css";
 import Link from "next/link";
-
+import Contact from "./Components/Contact";
 export const metadata = {
   title: "PORTFOLIO",
   description: "SNAGGEON PORTFOLIO",
@@ -29,16 +29,15 @@ export default function RootLayout({ children }) {
               <Link data-cursor="block" href="/sanggeon/portfolio">
                 Portfolio
               </Link>
-              <Link data-cursor="block" href="">
-                contact
-              </Link>
-              <Link data-cursor="block" href="">
+              <Contact></Contact>
+              {/* <Link data-cursor="block" href="">
                 SIGN IN
-              </Link>
+              </Link> */}
             </div>
             <img src="/img_circle.svg" alt="" />
           </div>
         </header>
+
         <div className="s__container">
           <div className="s__contents">{children}</div>
           <footer>

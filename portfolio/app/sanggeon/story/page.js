@@ -8,7 +8,9 @@ import "swiper/components/navigation/navigation.min.css";
 // pointer
 import { initCursor, updateCursor } from "@/app/Event/cursor";
 
-// import "../../main.css";
+// tab
+import CategoryFilter from "@/app/Components/CategoryFilter";
+
 import "../../css/story.css";
 
 export default function page() {
@@ -24,8 +26,161 @@ export default function page() {
     "/img_dia_b.svg",
   ]);
 
+  // tool
+  const categories = [
+    {
+      name: "ALL",
+      value: "all",
+    },
+    {
+      name: "DESIGN",
+      value: "design",
+    },
+    {
+      name: "PRONT",
+      value: "pront",
+    },
+    {
+      name: "BACK",
+      value: "back",
+    },
+    {
+      name: "ETC",
+      value: "etc",
+    },
+  ];
+
+  const categoryList = [
+    {
+      category: "design",
+      imgName: "포토샵",
+      imgFileName: "img_ps.png",
+    },
+    {
+      category: "design",
+      imgName: "일러스트레이터",
+      imgFileName: "img_ai.png",
+    },
+    {
+      category: "design",
+      imgName: "어도비XD",
+      imgFileName: "img_xd.png",
+    },
+    {
+      category: "design",
+      imgName: "피그마",
+      imgFileName: "img_fi.png",
+    },
+    {
+      category: "pront",
+      imgName: "HTML",
+      imgFileName: "img_html.png",
+    },
+    {
+      category: "pront",
+      imgName: "CSS",
+      imgFileName: "img_css.png",
+    },
+    {
+      category: "pront",
+      imgName: "자바스크립트",
+      imgFileName: "img_js.png",
+    },
+    {
+      category: "pront",
+      imgName: "제이쿼리",
+      imgFileName: "img_jq.png",
+    },
+    {
+      category: "pront",
+      imgName: "넥스트js",
+      imgFileName: "img_next.png",
+    },
+    {
+      category: "pront",
+      imgName: "리액트",
+      imgFileName: "img_react.png",
+    },
+    {
+      category: "pront",
+      imgName: "리액트네이티브",
+      imgFileName: "img_react_native.png",
+    },
+    {
+      category: "back",
+      imgName: "몽고DB",
+      imgFileName: "img_mong.png",
+    },
+    {
+      category: "back",
+      imgName: "AWS",
+      imgFileName: "img_aws.png",
+    },
+    {
+      category: "back",
+      imgName: "파이어베이스",
+      imgFileName: "img_fire.png",
+    },
+    {
+      category: "back",
+      imgName: "노드js",
+      imgFileName: "img_node.png",
+    },
+
+    {
+      category: "etc",
+      imgName: "에프터이팩트",
+      imgFileName: "img_ae.png",
+    },
+    {
+      category: "etc",
+      imgName: "프리미어프로",
+      imgFileName: "img_pr.png",
+    },
+    {
+      category: "etc",
+      imgName: "VSCODE",
+      imgFileName: "img_vs.png",
+    },
+    {
+      category: "etc",
+      imgName: "그누보드",
+      imgFileName: "img_gnu.png",
+    },
+    {
+      category: "etc",
+      imgName: "카페24",
+      imgFileName: "img_cafe24.png",
+    },
+  ];
+
+  //tap
+  const [category, setCatecory] = useState("all");
+  const [showList, setShowList] = useState(categoryList);
+  const getCategory = (item, index) => {
+    return (
+      <div className="category-box" key={item.imgName}>
+        <img
+          className="category-skill"
+          src={"/" + item.imgFileName}
+          alt={item.imgName}
+        />
+      </div>
+    );
+  };
+  useEffect(() => {
+    setShowList(
+      categoryList.filter((item) => {
+        if (category === "all") return true;
+        if (category === item.category) return true;
+        return false;
+      })
+    );
+  }, [category]);
+
   useEffect(() => {
     console.log("story");
+    document.querySelector("header").classList.remove("active-on");
     //마우스포인터
     initCursor({
       enableAutoTextCursor: true,
@@ -35,7 +190,6 @@ export default function page() {
       },
     });
     updateCursor();
-
     //마우스포인터
 
     // 텍스트이동바
@@ -98,6 +252,14 @@ export default function page() {
         </div>
         <div className="story-contents__right">
           <p className="contents-title">TOOL</p>
+          <CategoryFilter
+            categories={categories}
+            category={category}
+            setCatecory={setCatecory}
+          />
+          <div className="category01">
+            {showList.map((item, index) => getCategory(item, index))}
+          </div>
         </div>
       </div>
       <div className="move-text-wrap">

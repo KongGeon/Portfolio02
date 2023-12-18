@@ -28,6 +28,9 @@
 .story-contents__right {
   background-color: var(--main);
 }
+.story-contents__right .category-set {
+  margin-top: 46px;
+}
 .story .move-text-wrap {
   height: 130px;
   overflow: hidden;

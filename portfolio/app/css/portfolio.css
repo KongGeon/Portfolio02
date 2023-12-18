@@ -10,6 +10,9 @@
   height: 590px;
   overflow: auto;
 }
+.portfolio-contents__left img {
+  width: 100%;
+}
 .portfolio .portfolio-skill p + p::before {
   background: url(/icon_slash_b.svg) no-repeat;
 }
@@ -166,4 +169,7 @@
 }
 .portfolio .btn-bk {
   margin-top: 56px;
+}
+.portfolio-contents__bottom {
+  padding: 24px;
 }

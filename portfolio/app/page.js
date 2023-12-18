@@ -76,6 +76,7 @@ export default function Home() {
 
   useEffect(() => {
     console.log("home");
+    document.querySelector("header").classList.remove("active-on");
 
     //마우스포인터
     initCursor({

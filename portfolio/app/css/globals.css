@@ -157,6 +157,9 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+header.active-on {
+  grid-template-columns: 7fr 4fr;
+}
 .header__left {
   border-right: 1px solid var(--black);
   display: flex;
@@ -295,4 +298,195 @@ footer p {
 }
 .btn-bk img {
   margin-left: 4px;
+}
+
+/* contact */
+.contact-bar {
+  top: 0;
+  left: 0;
+  z-index: 9;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-left: 50px;
+  background-color: rgba(37, 37, 37, 0.3);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.active-on .contact-bar {
+  grid-template-columns: 7fr 4fr;
+}
+.contact-wrap > div {
+  background-color: var(--black);
+}
+.contact-title-wrap {
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  position: relative;
+  z-index: 2;
+}
+.contact-title-wrap h3 {
+  font-family: Source Serif Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.6px;
+  color: #fff;
+}
+.contact-title-wrap a {
+  border-radius: 4px;
+  padding: 0;
+}
+.contact-body {
+  height: calc(100vh - 61px);
+  padding: 0 32px 32px 32px;
+  position: relative;
+  z-index: 0;
+}
+.contact-body form {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 56px);
+  justify-content: center;
+  border-top: 1px solid #fff;
+}
+.contact-body p {
+  color: var(--WHITE, #fff);
+  font-family: Pretendard Variable;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: 1.4px;
+  margin-bottom: 16px;
+}
+.contact-body input {
+  padding: 16px 0;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: var(--black);
+  margin-bottom: 1px;
+}
+.contact-body input:-webkit-autofill,
+.contact-body input:-webkit-autofill:hover,
+.contact-body input:-webkit-autofill:focus,
+.contact-body input:-webkit-autofill:active {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px var(--black) inset;
+  box-shadow: 0 0 0px 1000px var(--black) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.contact-body input:autofill,
+.contact-body input:autofill:hover,
+.contact-body input:autofill:focus,
+.contact-body input:autofill:active {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px var(--black) inset;
+  box-shadow: 0 0 0px 1000px var(--black) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.contact-body input::placeholder {
+  color: var(--GRAY, #74726f);
+}
+.contact-body > a {
+  padding: 16px 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.contact-body > a img {
+  margin-left: 4px;
+}
+.contact-body .send-btn {
+  padding: 16px 42px;
+  background-color: var(--main);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--black);
+  margin-top: 48px;
+}
+@keyframes contact-open-title {
+  0% {
+    transform: translateY(-65px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.contact-bar.active-on .contact-title-wrap {
+  animation-name: contact-open-title;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+@keyframes contact-open-body {
+  0% {
+    transform: translateY(-120%);
+  }
+  50% {
+    transform: translateY(-120%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+.contact-bar.active-on .contact-body {
+  animation-name: contact-open-body;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+@keyframes contact-close-title {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-65px);
+  }
+}
+.contact-bar.active-off .contact-title-wrap {
+  animation-name: contact-close-title;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+@keyframes contact-close-body {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-120%);
+  }
+}
+.contact-bar.active-off .contact-body {
+  animation-name: contact-close-body;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+.contact-bar.active-off {
+  background-color: rgba(37, 37, 37, 0);
+}
+.contact-bar.active-on {
+  background-color: rgba(37, 37, 37, 0.3);
 }
