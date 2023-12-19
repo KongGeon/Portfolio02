@@ -6,6 +6,7 @@ export default function Contact() {
   const [animationContact, setAnimationContact] = useState("");
   const [showContact, setShowContact] = useState("none");
   console.log(showContact);
+
   return (
     <>
       <Link
@@ -40,11 +41,26 @@ export default function Contact() {
             </a>
           </div>
           <div className="contact-body">
-            <form action="">
+            <form action="/api/apiMail" method="POST">
               <p>FROM</p>
-              <input type="text" placeholder="Your name*" required />
-              <input type="email" placeholder="Your email*" required />
-              <input type="text" placeholder="Your message*" required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name*"
+                required
+              />
+              <input
+                type="email"
+                name="from"
+                placeholder="Your email*"
+                required
+              />
+              <input
+                type="text"
+                name="message"
+                placeholder="Your message*"
+                required
+              />
               <button className="send-btn" data-cursor="block">
                 SEND
               </button>
