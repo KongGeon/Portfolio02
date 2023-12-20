@@ -10,7 +10,7 @@
   height: 100%;
 }
 .move-text-wrap > div img {
-  transition: all 1s;
+  transition: all 3s;
 }
 .move-text-wrap > div > * {
   margin: 0 40px;

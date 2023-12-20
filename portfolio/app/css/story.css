@@ -47,7 +47,7 @@
   margin: 0 40px;
 }
 .move-text-wrap > div img {
-  transition: all 1s;
+  transition: all 3s;
 }
 .story-contents__left li {
   display: grid;

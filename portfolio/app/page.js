@@ -272,7 +272,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="main-contents__right-bottom">
-            <video muted autoPlay loop>
+            <video muted autoPlay loop playsinline>
               <source src="/main_play.mp4" type="video/mp4" />
             </video>
           </div>
