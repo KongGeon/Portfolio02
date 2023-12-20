@@ -15,14 +15,27 @@ import "../../css/portfolio.css";
 
 export default function page() {
   // 모바일여부
-  function isMobile() {
-    if (navigator.userAgent.indexOf("Mobile") != -1) {
-      return true;
+  const [mobile, setMobile] = useState(true);
+
+  useEffect(() => {
+    const user = navigator.userAgent;
+    if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
+      setMobile(false);
+      console.log("모바일임");
     } else {
-      return false;
+      console.log("PC임");
+      //마우스포인터
+      console.log("포인터온");
+      initCursor({
+        enableAutoTextCursor: true,
+        enableLighting: true,
+        blockStyle: {
+          radius: "auto",
+        },
+      });
+      updateCursor();
     }
-  }
-  const mobile = isMobile();
+  }, [mobile]);
 
   // tool
   const categories = [
@@ -180,8 +193,12 @@ export default function page() {
         return false;
       })
     );
-    if (!mobile) {
-      setTimeout(() => {
+    setTimeout(() => {
+      const user = navigator.userAgent;
+      if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
+        console.log("포인터 오프");
+      } else {
+        console.log("포인터 다시 온");
         disposeCursor();
         initCursor({
           enableAutoTextCursor: true,
@@ -190,25 +207,12 @@ export default function page() {
             radius: "auto",
           },
         });
-      }, 100);
-    }
+      }
+    }, 100);
   }, [multiCategory]);
 
   useEffect(() => {
     document.querySelector("header").classList.add("active-on");
-    if (!mobile) {
-      //마우스포인터
-      initCursor({
-        enableAutoTextCursor: true,
-        enableLighting: true,
-        blockStyle: {
-          radius: "auto",
-        },
-      });
-      updateCursor();
-
-      //마우스포인터
-    }
   }, []);
 
   return (

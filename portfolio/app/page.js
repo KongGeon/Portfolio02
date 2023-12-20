@@ -16,14 +16,28 @@ import "./css/main.css";
 
 export default function Home() {
   // 모바일여부
-  function isMobile() {
-    if (navigator.userAgent.indexOf("Mobile") != -1) {
-      return true;
+  const [mobile, setMobile] = useState(true);
+
+  useEffect(() => {
+    const user = navigator.userAgent;
+    if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
+      setMobile(false);
+      console.log("모바일임");
     } else {
-      return false;
+      console.log("PC임");
+      //마우스포인터
+      console.log("포인터온");
+      initCursor({
+        enableAutoTextCursor: true,
+        enableLighting: true,
+        blockStyle: {
+          radius: "auto",
+        },
+      });
+      updateCursor();
     }
-  }
-  const mobile = isMobile();
+  }, [mobile]);
+
 
   const [marginLeft, setMarginLeft] = useState(0);
   const [images, setImages] = useState([
@@ -87,18 +101,6 @@ export default function Home() {
   useEffect(() => {
     console.log("home");
     document.querySelector("header").classList.remove("active-on");
-
-    if (!mobile) {
-      //마우스포인터
-      initCursor({
-        enableAutoTextCursor: true,
-        enableLighting: true,
-        blockStyle: {
-          radius: "auto",
-        },
-      });
-      updateCursor();
-    }
 
     // 텍스트이동바
     const interval = setInterval(() => {

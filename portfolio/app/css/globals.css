@@ -515,7 +515,7 @@ footer p {
     margin-top: 97px;
     margin-left: 0;
   }
-  .header__right > a{
+  .header__right > div > a{
     padding: 14px 8px;
     display: inline-block;
   }
