@@ -173,3 +173,30 @@
 .portfolio-contents__bottom {
   padding: 24px;
 }
+@media all and (max-width: 767px) {
+  header.active-on{
+    grid-template-columns: 1fr;
+  }
+  .portfolio{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .portfolio-contents{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .portfolio-contents__right{
+    height: auto;
+  }
+  .category-child + .category-child{
+    margin-left: 8px;
+  }
+  .category02 > a{
+    width: 80px;
+    height: 80px;
+  }
+  .portfolio-contents__bottom{
+    border-bottom:1px solid var(--black) ;
+    padding-right: 0;
+  }
+}

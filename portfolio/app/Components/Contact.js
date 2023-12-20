@@ -5,7 +5,10 @@ import React, { useState, useEffect } from "react";
 export default function Contact() {
   const [animationContact, setAnimationContact] = useState("");
   const [showContact, setShowContact] = useState("none");
-  console.log(showContact);
+
+  const handleClick = () => {
+    alert('성공적으로 메일을 전송했습니다.')
+  }
 
   return (
     <>
@@ -41,7 +44,7 @@ export default function Contact() {
             </a>
           </div>
           <div className="contact-body">
-            <form action="/api/apiMail" method="POST">
+            <form action="/api/apiMail" method="POST" onSubmit={handleClick}>
               <p>FROM</p>
               <input
                 type="text"
@@ -65,7 +68,7 @@ export default function Contact() {
                 SEND
               </button>
             </form>
-            <a href="#" data-cursor="block">
+            <a href="https://github.com/KongGeon" data-cursor="block">
               GITHUB
               <img src="/icon_github_w.svg" alt="깃허브바로가기" />
             </a>

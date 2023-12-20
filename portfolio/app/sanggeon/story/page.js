@@ -14,6 +14,16 @@ import CategoryFilter from "@/app/Components/CategoryFilter";
 import "../../css/story.css";
 
 export default function page() {
+  // 모바일여부
+  function isMobile() {
+    if (navigator.userAgent.indexOf("Mobile") != -1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  const mobile = isMobile();
+
   const [marginLeft, setMarginLeft] = useState(0);
   const [images, setImages] = useState([
     "/img_stroy_text01.svg",
@@ -181,16 +191,18 @@ export default function page() {
   useEffect(() => {
     console.log("story");
     document.querySelector("header").classList.remove("active-on");
-    //마우스포인터
-    initCursor({
-      enableAutoTextCursor: true,
-      enableLighting: true,
-      blockStyle: {
-        radius: "auto",
-      },
-    });
-    updateCursor();
-    //마우스포인터
+    if (!mobile) {
+      //마우스포인터
+      initCursor({
+        enableAutoTextCursor: true,
+        enableLighting: true,
+        blockStyle: {
+          radius: "auto",
+        },
+      });
+      updateCursor();
+      //마우스포인터
+    }
 
     // 텍스트이동바
     const interval = setInterval(() => {
@@ -213,7 +225,7 @@ export default function page() {
         }
         return updatedImages;
       });
-    }, 10000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);

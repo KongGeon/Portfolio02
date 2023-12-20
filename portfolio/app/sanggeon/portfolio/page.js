@@ -6,13 +6,7 @@ import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 
 // pointer
-import {
-  initCursor,
-  updateCursor,
-  disposeCursor,
-  resetCursor,
-  updateConfig,
-} from "@/app/Event/cursor";
+import { initCursor, updateCursor, disposeCursor } from "@/app/Event/cursor";
 
 // tab
 import CategoryFilter from "@/app/Components/CategoryFilter";
@@ -20,6 +14,16 @@ import CategoryFilter from "@/app/Components/CategoryFilter";
 import "../../css/portfolio.css";
 
 export default function page() {
+  // 모바일여부
+  function isMobile() {
+    if (navigator.userAgent.indexOf("Mobile") != -1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  const mobile = isMobile();
+
   // tool
   const categories = [
     {
@@ -132,7 +136,7 @@ export default function page() {
   const [imgSrc, setImgSrc] = useState("img_portfolio_detail01.png");
   const getCategory = (item, index) => {
     return (
-      <a
+      <Link
         className="category-box"
         key={item.imgName}
         href="#"
@@ -147,7 +151,7 @@ export default function page() {
           src={"/" + item.imgFileName}
           alt={item.imgName}
         />
-      </a>
+      </Link>
     );
   };
   // 멀티
@@ -176,9 +180,24 @@ export default function page() {
         return false;
       })
     );
-    setTimeout(() => {
-      // console.log("탭바뀜2");
-      disposeCursor();
+    if (!mobile) {
+      setTimeout(() => {
+        disposeCursor();
+        initCursor({
+          enableAutoTextCursor: true,
+          enableLighting: true,
+          blockStyle: {
+            radius: "auto",
+          },
+        });
+      }, 100);
+    }
+  }, [multiCategory]);
+
+  useEffect(() => {
+    document.querySelector("header").classList.add("active-on");
+    if (!mobile) {
+      //마우스포인터
       initCursor({
         enableAutoTextCursor: true,
         enableLighting: true,
@@ -186,22 +205,10 @@ export default function page() {
           radius: "auto",
         },
       });
-    }, 100);
-  }, [multiCategory]);
+      updateCursor();
 
-  useEffect(() => {
-    document.querySelector("header").classList.add("active-on");
-    //마우스포인터
-    initCursor({
-      enableAutoTextCursor: true,
-      enableLighting: true,
-      blockStyle: {
-        radius: "auto",
-      },
-    });
-    updateCursor();
-
-    //마우스포인터
+      //마우스포인터
+    }
   }, []);
 
   return (

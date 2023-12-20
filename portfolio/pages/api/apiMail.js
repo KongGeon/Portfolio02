@@ -6,18 +6,16 @@ const handler = async (req, res) => {
     switch (method) {
       case "POST": {
         //Do some thing
-        // await sendEmail(
-        //   req.body.name,
-        //   req.body.from,
-        //   req.body.message
-        // );
-         //리다이렉트 : 해당 페이지로 이동
-         return res.status(200).json(req.body.name)
+        await sendEmail(
+          req.body.name,
+          req.body.from,
+          req.body.message
+        );
+         return res.status(200).redirect(302, '/sanggeon/home')
       }
       case "GET": {
         //Do some thing
         res.status(200).send(req.auth_data);
-        // res.status(200).send("No");
         break;
       }
       default:

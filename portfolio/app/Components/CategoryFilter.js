@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 
 import "../css/CategoryData.css";
+import Link from "next/link";
 
 const LS_KEY_CATEGORY = "LS_KEY_CATEGORY";
 const LS_KEY_MULTI_CATEGORY = "LS_KEY_MULTI_CATEGORY";
@@ -17,7 +18,7 @@ const CategoryFilter = ({
     if (setMultiCatecory) {
       //카테고리 멀티선택
       return categories.map((item, idx) => (
-        <a
+        <Link
           key={idx}
           href="#"
           data-cursor="block"
@@ -49,12 +50,12 @@ const CategoryFilter = ({
           }}
         >
           {item.name}
-        </a>
+        </Link>
       ));
     } else {
       //카테고리 싱글선택
       return categories.map((item, idx) => (
-        <a
+        <Link
           key={idx}
           href="#"
           data-cursor="block"
@@ -69,7 +70,7 @@ const CategoryFilter = ({
           }}
         >
           {item.name}
-        </a>
+        </Link>
       ));
     }
   };

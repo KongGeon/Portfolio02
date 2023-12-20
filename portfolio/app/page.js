@@ -15,6 +15,16 @@ import MainSwiperData from "./Components/MainSwiperData";
 import "./css/main.css";
 
 export default function Home() {
+  // 모바일여부
+  function isMobile() {
+    if (navigator.userAgent.indexOf("Mobile") != -1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  const mobile = isMobile();
+
   const [marginLeft, setMarginLeft] = useState(0);
   const [images, setImages] = useState([
     "/UIUX.svg",
@@ -78,16 +88,17 @@ export default function Home() {
     console.log("home");
     document.querySelector("header").classList.remove("active-on");
 
-    //마우스포인터
-    initCursor({
-      enableAutoTextCursor: true,
-      enableLighting: true,
-      blockStyle: {
-        radius: "auto",
-      },
-    });
-    updateCursor();
-    //마우스포인터
+    if (!mobile) {
+      //마우스포인터
+      initCursor({
+        enableAutoTextCursor: true,
+        enableLighting: true,
+        blockStyle: {
+          radius: "auto",
+        },
+      });
+      updateCursor();
+    }
 
     // 텍스트이동바
     const interval = setInterval(() => {
@@ -110,7 +121,7 @@ export default function Home() {
         }
         return updatedImages;
       });
-    }, 10000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);

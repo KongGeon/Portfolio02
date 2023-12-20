@@ -490,3 +490,49 @@ footer p {
 .contact-bar.active-on {
   background-color: rgba(37, 37, 37, 0.3);
 }
+@media all and (max-width: 767px) {
+}
+@media all and (max-width: 767px) {
+  header {
+    padding-left: 0;
+    grid-template-columns: 1fr;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: var(--BG, #e7e4de);
+    z-index: 10;
+  }
+  .header__left {
+    justify-content: center;
+    padding-top: 8px;
+    border-right: none;
+  }
+  .header__right {
+    padding: 0 8px;
+  }
+  .s__container{
+    margin-top: 97px;
+    margin-left: 0;
+  }
+  .header__right > a{
+    padding: 14px 8px;
+    display: inline-block;
+  }
+  .header__right > img {
+    width: 14px;
+  }
+  .header__right > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: calc(100% - 40px);
+  }
+  .contact-bar{
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+  .header__right .contact-wrap{
+    display: block;
+  }
+}

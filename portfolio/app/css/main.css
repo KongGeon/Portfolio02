@@ -280,3 +280,29 @@
   height: 100%;
   background-color: var(--main);
 }
+@media all and (max-width: 767px) {
+  .main-contents{
+    flex-direction: column-reverse;
+  }
+  .main-contents > div{
+    width: 100%;
+    height: auto;
+  }
+  .main-contents > div.main-contents__left{
+    height: 600px;
+    border-right: none;
+  }
+  .home .move-text-wrap{
+    height: 80px;
+  }
+  .move-text-wrap > div img{
+    height: 30px;
+    margin: 0 16px;
+  }
+  .main-swiper-contents{
+    padding: 0px 24px 16px 24px;
+  }
+  .portfolio-data, .portfolio-skill{
+    margin-bottom: 20px;
+  }
+}
