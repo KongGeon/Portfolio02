@@ -11,12 +11,13 @@ import { initCursor, updateCursor, disposeCursor } from "@/app/Event/cursor";
 // tab
 import CategoryFilter from "@/app/Components/CategoryFilter";
 
-import "../../css/portfolio.css";
+import "../../../css/portfolio.css";
 
-export default function page() {
+export default function page(props) {
   // 모바일여부
   const [mobile, setMobile] = useState(true);
 
+  console.log(props.params.id)
   useEffect(() => {
     const user = navigator.userAgent;
     if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
