@@ -195,6 +195,7 @@
   .portfolio-contents__right {
     height: auto;
     padding-bottom: 50px;
+    min-height: initial;
   }
   .category-child + .category-child {
     margin-left: 8px;
