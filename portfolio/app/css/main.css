@@ -305,4 +305,13 @@
   .portfolio-data, .portfolio-skill{
     margin-bottom: 20px;
   }
+  .main-contents__right-bottom video {
+    display: none;
+  }
+  .home .swiper-button-next{
+    background: url(/icon_swiper_right_hover.svg);
+  }
+  .home .swiper-button-prev {
+    background: url(/icon_swiper_left_hover.svg);
+}
 }

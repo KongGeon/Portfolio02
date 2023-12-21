@@ -17,7 +17,6 @@ export default function page(props) {
   // 모바일여부
   const [mobile, setMobile] = useState(true);
 
-  console.log(props.params.id)
   useEffect(() => {
     const user = navigator.userAgent;
     if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
@@ -67,96 +66,212 @@ export default function page(props) {
   ];
   const categoryList = [
     {
+      id: "si",
       category: "design,markup,front",
       imgName: "SI",
       imgFileName: "img_portfolio_SI.svg",
       imgDetail: "img_portfolio_detailSI.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA", "전자정부프레임워크", "JAVASCRIPT", "JQUERY", "REACT"],
+      step: "step2-4",
+      per: "-",
+      text: "공공기관 사이트 제작 참여 / 건양대 / 오픈랩 / AICA / KISTI / KOCAS",
     },
     {
+      id: "img01",
       category: "plan,design",
-      imgName: "외국어학습앱",
+      imgName: "TTMIK",
       imgFileName: "img_portfolio01.png",
       imgDetail: "img_portfolio_detail01.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA"],
+      step: "step2",
+      per: "50%",
+      text: "TTMIK은 100만 유튜브 TALK TO ME IN KOREAN의 학습어플리케이션입니다. 자체적으로 제작하는 책을 읽고 듣고 문제를 풀며 학습할 수 있도록 개발되고 있습니다.(개발중)",
+      link: '#',
     },
     {
+      id: "img02",
       category: "design,pront,back",
       imgName: "금강회계법인",
       imgFileName: "img_portfolio02.png",
       imgDetail: "img_portfolio_detail02.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA", "IMWEB"],
+      step: "step2-4",
+      per: "100%",
+      text: "금강회계법인의 소개사이트를 아임웹을 이용하여 개발했습니다.",
+      link: '#',
     },
     {
+      id: "img03",
       category: "plan,design",
       imgName: "아비스몰웹앱",
       imgFileName: "img_portfolio03.png",
       imgDetail: "img_portfolio_detail03.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA"],
+      step: "step2",
+      per: "70%",
+      text: "아비스몰웹앱은 현대모비스 앱 내부에 자동차용품이나 썬팅과 같은 서비스를 구매하는 사이트입니다. 현대의 아이덴티티와 같은 디자인을 통일되게 적용하여 디자인하였습니다.",
+      link: '#'
     },
     {
+      id: "img04",
       category: "markup",
-      imgName: "청년인제데이터베이스",
+      imgName: "청년DB",
       imgFileName: "img_portfolio04.png",
       imgDetail: "img_portfolio_detail04.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["JAVASCRIPT"],
+      step: "step3",
+      per: "100%",
+      text: "청년DB는 국무조정실에서 관리하는 청년과 정책담당자를 이어주는 쌍방향 매칭 플랫폼입니다. WA인증을 위해 웹표준과 웹접근성에 맞도록 개발하였습니다.",
+      link: '#'
     },
     {
+      id: "img05",
       category: "design",
       imgName: "신한 시나몬",
       imgFileName: "img_portfolio05.png",
       imgDetail: "img_portfolio_detail05.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA"],
+      step: "step2",
+      per: "5%",
+      text: "시나몬은 신한은행에서 개발한 메타버스 서비스입니다. 서비스 UI중 아이콘 디자인과 홍보배너 디자인에 참여했습니다.",
+      link: '#'
     },
     {
+      id: "img06",
       category: "markup,front",
-      imgName: "아비스몰웹",
+      imgName: "아비스몰",
       imgFileName: "img_portfolio06.png",
       imgDetail: "img_portfolio_detail06.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA", "CAFE24"],
+      step: "step3-4",
+      per: "70%",
+      text: "카페24의 레퍼런스 구매 후 수정하여 아비스몰 쇼핑몰 사이트를 개발했습니다.",
+      link: '#'
     },
     {
+      id: "img07",
       category: "markup",
-      imgName: "공직박람회",
+      imgName: "2022 온라인공직박람회",
       imgFileName: "img_portfolio07.png",
       imgDetail: "img_portfolio_detail07.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["JAVASCRIPT", "JQUERY"],
+      step: "step3",
+      per: "70%",
+      text: "온라인으로 개최된 2022 공직박람회는 도트게임풍의 독특한 UI를 여러 디바이스에 대응하여 제대로 반응형이 되게 하는 것에 집중하여 개발되었습니다.",
+      link: '#'
     },
     {
+      id: "img08",
       category: "design,markup",
-      imgName: "인드음악플랫폼",
+      imgName: "인드음악플랫폼 웹&웹앱",
       imgFileName: "img_portfolio08.png",
       imgDetail: "img_portfolio_detail08.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA", "JAVASCRIPT"],
+      step: "step2-3",
+      per: "100%",
+      text: "HOOK는 인디음원을 펀딩구매 및 등록할 수 있는 플랫폼입니다. 사용자, 업로더, 관리자에 맞춰 다른 디자인으로 개발되었습니다.",
+      link: '#'
     },
     {
+      id: "img09",
       category: "markup,pront",
-      imgName: "오늘의나관리자페이지",
+      imgName: "오늘의나 관리자페이지",
       imgFileName: "img_portfolio09.png",
       imgDetail: "img_portfolio_detail09.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["JAVASCRIPT", "REACT"],
+      step: "step3-4",
+      per: "100%",
+      text: "오늘의 나 SNS 관리자페이지를 리액트를 이용하여 프론트엔드 개발했습니다.",
+      link: '#'
     },
     {
+      id: "img10",
       category: "plan,design,markup,pront,back",
       imgName: "제이로그",
       imgFileName: "img_portfolio10.png",
       imgDetail: "img_portfolio_detail10.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA", "JAVASCRIPT", "REACT_NATIVE", "EXPO"],
+      step: "step1-5",
+      per: "100%",
+      text: "제이로그는 현재 1인개발중인 기독교 묵상 어플리케이션으로 현재 배포중 에러로 수정중에 있습니다.",
+      link: '#'
     },
     {
-      category: "design,markup,pront",
+      id: "img11",
+      category: "design,markup,pront,back",
       imgName: "상상아이디",
       imgFileName: "img_portfolio11.png",
       imgDetail: "img_portfolio_detail11.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["ADOBE_XD", "GNUBOARD"],
+      step: "step2-4",
+      per: "100%",
+      text: "인테리어 업체 상상아이디의 회사소개 페이지를 그누보드를 이용해 개발했습니다.",
+      link: '#'
     },
     {
-      category: "plan,design,pront",
-      imgName: "애완동물용품플랫폼",
+      id: "img12",
+      category: "plan,design,markup",
+      imgName: "올댓펫",
       imgFileName: "img_portfolio12.png",
       imgDetail: "img_portfolio_detail12.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["ADOBE_XD", "JAVASCRIPT"],
+      step: "step1-3",
+      per: "50%",
+      text: "올댓펫은 SNS, 쇼핑, 커뮤니티 기능을 가진 펫 인테리어플랫폼입니다. 기획에 일부 참여했으며 디자인, 마크업을 담당해 개발했습니다.",
+      link: '#'
     },
   ];
+
+  // 처음켜지면 id의 값이 thisPage의 값으로 지정
+  const [thisPage, setThisPage] = useState("si");
+  const [thisCategory, setThisCategory] = useState();
+
+  // thisPage의 값이 바뀌면 thisCategory 값이 해당 내용으로 지정
+
+  useEffect(() => {
+    setThisPage(props.params.id);
+    console.log("현재페이지", props.params.id);
+    let arr = categoryList.find((e) => {
+      if (e.id === props.params.id) {
+        return true;
+      }
+    });
+    if (!arr) {
+      alert("없는 포트폴리오 이름입니다.");
+      arr = categoryList.find((e) => {
+        if (e.id === "img01") {
+          return true;
+        }
+      });
+    }
+    setThisCategory(arr);
+  }, [thisPage]);
+
+  console.log(thisCategory);
+  console.log(thisCategory && thisCategory.imgDetail);
   const [multiCategory, setMultiCatecory] = useState("all");
   const [showMultiList, setMultiShowList] = useState(categoryList);
-  const [imgSrc, setImgSrc] = useState("img_portfolio_detail01.png");
   const getCategory = (item, index) => {
     return (
       <Link
         className="category-box"
         key={item.imgName}
-        href="#"
+        href={item.id}
         data-cursor="block"
         onClick={() => {
-          setImgSrc(item.imgDetail);
           document.querySelector(".portfolio-contents__left").scrollTop = 0;
         }}
       >
@@ -194,6 +309,7 @@ export default function page(props) {
         return false;
       })
     );
+
     setTimeout(() => {
       const user = navigator.userAgent;
       if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
@@ -213,6 +329,18 @@ export default function page(props) {
   }, [multiCategory]);
 
   useEffect(() => {
+    //포폴리스트 선택시 active-on 클래스 추가
+    let thisList =
+      thisCategory &&
+      document.querySelector("a[href='" + thisCategory.id + "']");
+    thisCategory &&
+      thisList &&
+      document
+        .querySelector("a[href='" + thisCategory.id + "']")
+        .classList.add("active-on");
+  }, [showMultiList]);
+
+  useEffect(() => {
     document.querySelector("header").classList.add("active-on");
   }, []);
 
@@ -220,35 +348,33 @@ export default function page(props) {
     <div className="portfolio">
       <div className="portfolio-contents">
         <div className="portfolio-contents__left">
-          <img src={"/" + imgSrc} alt="포트폴리오전체화면" />
+          <img
+            src={"/" + thisCategory?.imgDetail}
+            alt={thisCategory?.imgName + "이미지"}
+          />
         </div>
         <div className="portfolio-contents__right">
           <p className="contents-title">WORK DETAIL</p>
           <h2 className="portfolio-title" data-cursor="text">
-            타이틀
+            {thisCategory?.imgName}
           </h2>
           <div className="portfolio-skill">
-            <p>REACT</p>
-            <p>JQUERY</p>
-            <p>DESIGN</p>
+            {thisCategory?.stack.map((item, index) => {
+              return <p>{item}</p>;
+            })}
           </div>
           <ul className="portfolio-data">
             <li>
               <span>작업일</span>
-              <p>2023.01 ~ 2023.05</p>
+              <p>{thisCategory?.date}</p>
             </li>
             <li>
               <span>기여도</span>
-              <p>100%</p>
+              <p>{thisCategory?.per}</p>
             </li>
           </ul>
-          <p className="portfolio-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt
-            quos porro dolor est, quisquam nostrum quas voluptatem ab,
-            voluptatibus nam praesentium cumque alias eius debitis recusandae
-            provident enim? Placeat?
-          </p>
-          <div className="portfolio-step-wrap step4-5">
+          <p className="portfolio-text">{thisCategory?.text}</p>
+          <div className={"portfolio-step-wrap " + thisCategory?.step}>
             <div className="portfolio-step step01">
               <div className="circle"></div>
               <p className="step-title">기획</p>
@@ -259,7 +385,7 @@ export default function page(props) {
             </div>
             <div className="portfolio-step step03">
               <div className="circle"></div>
-              <p className="step-title">퍼블</p>
+              <p className="step-title">마크업</p>
             </div>
             <div className="portfolio-step step04">
               <div className="circle"></div>
@@ -273,14 +399,15 @@ export default function page(props) {
               <div className="step-bar-inner"></div>
             </div>
           </div>
-          <Link
+          {thisCategory?.link&&<Link
             className="btn-bk"
             data-cursor="block"
-            href="https://www.naver.com/"
+            href={thisCategory?.link}
           >
             LINK
-            <img src="/icon_down_btn.svg" alt="스토리이동" />
-          </Link>{" "}
+            <img src="/icon_down_btn.svg" alt="포트폴리오 상세페이지로 이동" />
+          </Link>}
+          
         </div>
       </div>
       <div className="portfolio-contents__bottom">

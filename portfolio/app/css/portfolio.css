@@ -173,6 +173,12 @@
 .portfolio-contents__bottom {
   padding: 24px;
 }
+.category02 > a.active-on{
+  background-color: var(--main);
+}
+.category02 > a.active-on img{
+  opacity: 0.5;
+}
 @media all and (max-width: 767px) {
   header.active-on{
     grid-template-columns: 1fr;
@@ -187,6 +193,7 @@
   }
   .portfolio-contents__right{
     height: auto;
+    padding-bottom: 50px;
   }
   .category-child + .category-child{
     margin-left: 8px;
@@ -198,5 +205,8 @@
   .portfolio-contents__bottom{
     border-bottom:1px solid var(--black) ;
     padding-right: 0;
+  }
+  .portfolio-contents__left{
+    height: auto;
   }
 }

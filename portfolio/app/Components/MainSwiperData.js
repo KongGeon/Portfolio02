@@ -17,7 +17,7 @@ export default function MainSwiperData(props) {
           <p>{props.per}</p>
         </li>
       </ul>
-      <div className="portfolio-step-wrap step4-5">
+      <div className={"portfolio-step-wrap " + props.step}>
         <div className="portfolio-step step01">
           <div className="circle"></div>
           <p className="step-title">기획</p>
@@ -28,7 +28,7 @@ export default function MainSwiperData(props) {
         </div>
         <div className="portfolio-step step03">
           <div className="circle"></div>
-          <p className="step-title">퍼블</p>
+          <p className="step-title">마크업</p>
         </div>
         <div className="portfolio-step step04">
           <div className="circle"></div>

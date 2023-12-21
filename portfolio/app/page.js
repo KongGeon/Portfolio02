@@ -38,7 +38,6 @@ export default function Home() {
     }
   }, [mobile]);
 
-
   const [marginLeft, setMarginLeft] = useState(0);
   const [images, setImages] = useState([
     "/UIUX.svg",
@@ -55,6 +54,176 @@ export default function Home() {
     width: "100%",
     height: "100%",
   };
+  const [categoryList, setCategoryList] = useState([
+    {
+      id: "si",
+      category: "design,markup,front",
+      imgName: "SI",
+      imgFileName: "img_portfolio_SI.svg",
+      imgDetail: "img_portfolio_detailSI.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA", "전자정부프레임워크", "JAVASCRIPT", "JQUERY", "REACT"],
+      step: "step2-4",
+      per: "-",
+      text: "공공기관 사이트 제작 참여 / 건양대 / 오픈랩 / AICA / KISTI / KOCAS",
+    },
+    {
+      id: "img01",
+      category: "plan,design",
+      imgName: "TTMIK",
+      imgFileName: "img_portfolio01.png",
+      imgDetail: "img_portfolio_detail01.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA"],
+      step: "step2",
+      per: "50%",
+      text: "TTMIK은 100만 유튜브 TALK TO ME IN KOREAN의 학습어플리케이션입니다. 자체적으로 제작하는 책을 읽고 듣고 문제를 풀며 학습할 수 있도록 개발되고 있습니다.(개발중)",
+      link: "#",
+    },
+    {
+      id: "img02",
+      category: "design,pront,back",
+      imgName: "금강회계법인",
+      imgFileName: "img_portfolio02.png",
+      imgDetail: "img_portfolio_detail02.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA", "IMWEB"],
+      step: "step2-4",
+      per: "100%",
+      text: "금강회계법인의 소개사이트를 아임웹을 이용하여 개발했습니다.",
+      link: "#",
+    },
+    {
+      id: "img03",
+      category: "plan,design",
+      imgName: "아비스몰웹앱",
+      imgFileName: "img_portfolio03.png",
+      imgDetail: "img_portfolio_detail03.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA"],
+      step: "step2",
+      per: "70%",
+      text: "아비스몰웹앱은 현대모비스 앱 내부에 자동차용품이나 썬팅과 같은 서비스를 구매하는 사이트입니다. 현대의 아이덴티티와 같은 디자인을 통일되게 적용하여 디자인하였습니다.",
+      link: "#",
+    },
+    {
+      id: "img04",
+      category: "markup",
+      imgName: "청년DB",
+      imgFileName: "img_portfolio04.png",
+      imgDetail: "img_portfolio_detail04.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["JAVASCRIPT"],
+      step: "step3",
+      per: "100%",
+      text: "청년DB는 국무조정실에서 관리하는 청년과 정책담당자를 이어주는 쌍방향 매칭 플랫폼입니다. WA인증을 위해 웹표준과 웹접근성에 맞도록 개발하였습니다.",
+      link: "#",
+    },
+    {
+      id: "img05",
+      category: "design",
+      imgName: "신한 시나몬",
+      imgFileName: "img_portfolio05.png",
+      imgDetail: "img_portfolio_detail05.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA"],
+      step: "step2",
+      per: "5%",
+      text: "시나몬은 신한은행에서 개발한 메타버스 서비스입니다. 서비스 UI중 아이콘 디자인과 홍보배너 디자인에 참여했습니다.",
+      link: "#",
+    },
+    {
+      id: "img06",
+      category: "markup,front",
+      imgName: "아비스몰",
+      imgFileName: "img_portfolio06.png",
+      imgDetail: "img_portfolio_detail06.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA", "CAFE24"],
+      step: "step3-4",
+      per: "70%",
+      text: "카페24의 레퍼런스 구매 후 수정하여 아비스몰 쇼핑몰 사이트를 개발했습니다.",
+      link: "#",
+    },
+    {
+      id: "img07",
+      category: "markup",
+      imgName: "2022 온라인공직박람회",
+      imgFileName: "img_portfolio07.png",
+      imgDetail: "img_portfolio_detail07.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["JAVASCRIPT", "JQUERY"],
+      step: "step3",
+      per: "70%",
+      text: "온라인으로 개최된 2022 공직박람회는 도트게임풍의 독특한 UI를 여러 디바이스에 대응하여 제대로 반응형이 되게 하는 것에 집중하여 개발되었습니다.",
+      link: "#",
+    },
+    {
+      id: "img08",
+      category: "design,markup",
+      imgName: "인드음악플랫폼 웹&웹앱",
+      imgFileName: "img_portfolio08.png",
+      imgDetail: "img_portfolio_detail08.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA", "JAVASCRIPT"],
+      step: "step2-3",
+      per: "100%",
+      text: "HOOK는 인디음원을 펀딩구매 및 등록할 수 있는 플랫폼입니다. 사용자, 업로더, 관리자에 맞춰 다른 디자인으로 개발되었습니다.",
+      link: "#",
+    },
+    {
+      id: "img09",
+      category: "markup,pront",
+      imgName: "오늘의나 관리자페이지",
+      imgFileName: "img_portfolio09.png",
+      imgDetail: "img_portfolio_detail09.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["JAVASCRIPT", "REACT"],
+      step: "step3-4",
+      per: "100%",
+      text: "오늘의 나 SNS 관리자페이지를 리액트를 이용하여 프론트엔드 개발했습니다.",
+      link: "#",
+    },
+    {
+      id: "img10",
+      category: "plan,design,markup,pront,back",
+      imgName: "제이로그",
+      imgFileName: "img_portfolio10.png",
+      imgDetail: "img_portfolio_detail10.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA", "JAVASCRIPT", "REACT_NATIVE", "EXPO"],
+      step: "step1-5",
+      per: "100%",
+      text: "제이로그는 현재 1인개발중인 기독교 묵상 어플리케이션으로 현재 배포중 에러로 수정중에 있습니다.",
+      link: "#",
+    },
+    {
+      id: "img11",
+      category: "design,markup,pront,back",
+      imgName: "상상아이디",
+      imgFileName: "img_portfolio11.png",
+      imgDetail: "img_portfolio_detail11.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["ADOBE_XD", "GNUBOARD"],
+      step: "step2-4",
+      per: "100%",
+      text: "인테리어 업체 상상아이디의 회사소개 페이지를 그누보드를 이용해 개발했습니다.",
+      link: "#",
+    },
+    {
+      id: "img12",
+      category: "plan,design,markup",
+      imgName: "올댓펫",
+      imgFileName: "img_portfolio12.png",
+      imgDetail: "img_portfolio_detail12.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["ADOBE_XD", "JAVASCRIPT"],
+      step: "step1-3",
+      per: "50%",
+      text: "올댓펫은 SNS, 쇼핑, 커뮤니티 기능을 가진 펫 인테리어플랫폼입니다. 기획에 일부 참여했으며 디자인, 마크업을 담당해 개발했습니다.",
+      link: "#",
+    },
+  ]);
 
   // 스와이퍼
   const [swiper, setSwiper] = useState(null);
@@ -150,94 +319,35 @@ export default function Home() {
         <div className="main-contents__left">
           <p className="main-contents__left-title">WORK DETAIL</p>
           <Swiper {...swiperParams} ref={setSwiper}>
-            <SwiperSlide>
-              <Link
-                data-cursor="link"
-                href="https://www.naver.com/"
-                className="swiper_link"
-              >
-                <img src="/img_portfolio01.png" alt="" />
-              </Link>
-              <div className={swiperDataOpen}>
-                <button onClick={swiperOpen}>
-                  <div data-cursor="block">
-                    <img src="/icon_down_arrow_w.svg" alt="열기" title="열기" />
-                  </div>
-                </button>
-                <MainSwiperData
-                  title="타이틀"
-                  skill={["REACT", "JQUERY", "DESIGN"]}
-                  date="2023.01 ~ 2023.05"
-                  per="100%"
-                ></MainSwiperData>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Link
-                data-cursor="link"
-                href="https://www.naver.com/"
-                className="swiper_link"
-              >
-                <img src="/img_portfolio02.png" alt="" />
-              </Link>
-              <div className={swiperDataOpen}>
-                <button onClick={swiperOpen}>
-                  <div data-cursor="block">
-                    <img src="/icon_down_arrow_w.svg" alt="열기" title="열기" />
-                  </div>
-                </button>
-                <MainSwiperData
-                  title="타이틀"
-                  skill={["REACT", "JQUERY", "DESIGN"]}
-                  date="2023.01 ~ 2023.05"
-                  per="100%"
-                ></MainSwiperData>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Link
-                data-cursor="link"
-                href="https://www.naver.com/"
-                className="swiper_link"
-              >
-                <img src="/img_portfolio03.png" alt="" />
-              </Link>
-              <div className={swiperDataOpen}>
-                <button onClick={swiperOpen}>
-                  <div data-cursor="block">
-                    <img src="/icon_down_arrow_w.svg" alt="열기" title="열기" />
-                  </div>
-                </button>
-                <MainSwiperData
-                  title="타이틀"
-                  skill={["REACT", "JQUERY", "DESIGN"]}
-                  date="2023.01 ~ 2023.05"
-                  per="100%"
-                ></MainSwiperData>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Link
-                data-cursor="link"
-                href="https://www.naver.com/"
-                className="swiper_link"
-              >
-                <img src="/img_portfolio04.png" alt="" />
-              </Link>
-              <div className={swiperDataOpen}>
-                <button onClick={swiperOpen}>
-                  <div data-cursor="block">
-                    <img src="/icon_down_arrow_w.svg" alt="열기" title="열기" />
-                  </div>
-                </button>
-                <MainSwiperData
-                  title="타이틀"
-                  skill={["REACT", "JQUERY", "DESIGN"]}
-                  date="2023.01 ~ 2023.05"
-                  per="100%"
-                ></MainSwiperData>
-              </div>
-            </SwiperSlide>
+            {categoryList.map((item, index) => (
+              <SwiperSlide key={index}>
+                <Link
+                  data-cursor="link"
+                  href={"portfolio/" + item.id}
+                  className="swiper_link"
+                >
+                  <img src={"/" + item.imgFileName} alt={item.imgName} />
+                </Link>
+                <div className={swiperDataOpen}>
+                  <button onClick={swiperOpen}>
+                    <div data-cursor="block">
+                      <img
+                        src="/icon_down_arrow_w.svg"
+                        alt="열기"
+                        title="열기"
+                      />
+                    </div>
+                  </button>
+                  <MainSwiperData
+                    title={item.imgName}
+                    skill={item.stack}
+                    date={item.date}
+                    per={item.per}
+                    step={item.step}
+                  ></MainSwiperData>
+                </div>
+              </SwiperSlide>
+            ))}
             <a
               href="#"
               className="swiper-button-prev"
@@ -265,14 +375,14 @@ export default function Home() {
             <Link
               className="btn-bk"
               data-cursor="block"
-              href="https://www.naver.com/"
+              href="story"
             >
               STORY
               <img src="/icon_down_btn.svg" alt="스토리이동" />
             </Link>
           </div>
           <div className="main-contents__right-bottom">
-            <video muted autoPlay loop playsinline>
+            <video muted autoPlay loop playsInline>
               <source src="/main_play.mp4" type="video/mp4" />
             </video>
           </div>

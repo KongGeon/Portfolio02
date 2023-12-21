@@ -159,6 +159,7 @@
   }
   .story-contents >.story-contents__left{
     padding-top: 70px;
+    padding-bottom: 50px;
   }
   .category01{
     grid-template-columns: 1fr 1fr 1fr 1fr;

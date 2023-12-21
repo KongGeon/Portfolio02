@@ -219,6 +219,7 @@ footer p {
 }
 .portfolio-skill {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 .portfolio-skill p {
