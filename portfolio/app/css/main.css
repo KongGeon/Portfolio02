@@ -73,6 +73,8 @@
 }
 .main-contents__right-bottom video {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .swiper-button-next:after,
@@ -103,6 +105,7 @@
 }
 .swiper-slide img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .main-portfolio-wrap {
@@ -280,38 +283,61 @@
   height: 100%;
   background-color: var(--main);
 }
+
+.typing {
+  display: inline;
+  animation-name: cursor;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  font-size: 32px;
+  line-height: 1;
+  margin-right: 8px;
+}
+@keyframes cursor {
+  0% {
+    border-right: 1px solid var(--main);
+  }
+  50% {
+    border-right: 1px solid var(--black);
+  }
+  100% {
+    border-right: 1px solid var(--main);
+  }
+}
+
 @media all and (max-width: 767px) {
-  .main-contents{
+  .main-contents {
     flex-direction: column-reverse;
   }
-  .main-contents > div{
+  .main-contents > div {
     width: 100%;
     height: auto;
   }
-  .main-contents > div.main-contents__left{
+  .main-contents > div.main-contents__left {
     height: 600px;
     border-right: none;
   }
-  .home .move-text-wrap{
+  .home .move-text-wrap {
     height: 80px;
   }
-  .move-text-wrap > div img{
+  .move-text-wrap > div img {
     height: 30px;
     margin: 0 16px;
   }
-  .main-swiper-contents{
+  .main-swiper-contents {
     padding: 0px 24px 16px 24px;
   }
-  .portfolio-data, .portfolio-skill{
+  .portfolio-data,
+  .portfolio-skill {
     margin-bottom: 20px;
   }
   .main-contents__right-bottom video {
     display: none;
   }
-  .home .swiper-button-next{
+  .home .swiper-button-next {
     background: url(/icon_swiper_right_hover.svg);
   }
   .home .swiper-button-prev {
     background: url(/icon_swiper_left_hover.svg);
-}
+  }
 }

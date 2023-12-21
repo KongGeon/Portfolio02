@@ -250,6 +250,7 @@ export default function Home() {
     style: swiperStyle,
     // spaceBetween: 50,
     slidesPerView: 1,
+    loop: true,
   };
   // 스와이퍼
 
@@ -300,6 +301,45 @@ export default function Home() {
     };
     // 텍스트이동바
   }, []);
+
+  // 텍스트 타이핑 효과
+
+  const textList = ["FrontEnd", "Big", "Strong"];
+  const [actionText, setActionText] = useState("");
+  const [count, setCount] = useState(0);
+  const [textIndex, setTextIndex] = useState(0);
+  const [textBack, setTextBack] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      let thisText = textList[textIndex].split("");
+      //텍스트 타이핑 삭제
+      if (textBack) {
+        if (count === 0) {
+          //모두 삭제했을 경우
+          setTimeout(() => {
+            setTextBack(false);
+            setTextIndex((textIndex + 1) % textList.length);
+          }, 1000);
+        } else {
+          //더 삭제해야할 경우
+          setCount(count - 1);
+          setActionText(actionText.slice(0, -1));
+        }
+      }
+      //텍스트타이필 추가인데 텍스트 꽉참
+      else if (thisText.length === count) {
+        setTimeout(() => {
+          setTextBack(true); //이제부터 삭제로 변경
+        }, 1000);
+      }
+      //텍스트타이필 추가
+      else {
+        setCount(count + 1);
+        setActionText(actionText + thisText[count]);
+      }
+    }, 100);
+  }, [count, textIndex, textBack]);
 
   return (
     <div className="home">
@@ -365,18 +405,17 @@ export default function Home() {
         <div className="main-contents__right">
           <div className="main-contents__right-top">
             <p className="contents-title">ABOUT</p>
-            <h2>카카오 워크보드</h2>
+            <h2>
+              {actionText}
+              <p className="typing"></p>Developer
+            </h2>
             <span>
-              워크보드는 업무 정보와 자료를 편리하게 공유하기 위한 웹
-              서비스입니다. "카카오워크"라는 종합 업무 플랫폼에 속한 서비스 중
-              하나로, 업무 내용을 빠르게 확인할 수 있는 게시판 형태로
-              개발되었습니다.
+              디자인부터 프론트엔드까지 가능한 개발자 양상건입니다.
+              <br />
+              저에게 관심이 있거나 궁금한 점이 있으신 분은 상단의 'CONTACT'
+              메뉴를 통해 메일을 보내주세요! :)
             </span>
-            <Link
-              className="btn-bk"
-              data-cursor="block"
-              href="story"
-            >
+            <Link className="btn-bk" data-cursor="block" href="story">
               STORY
               <img src="/icon_down_btn.svg" alt="스토리이동" />
             </Link>

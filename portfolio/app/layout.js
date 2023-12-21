@@ -2,8 +2,8 @@ import "./css/globals.css";
 import Link from "next/link";
 import Contact from "./Components/Contact";
 export const metadata = {
-  title: "PORTFOLIO",
-  description: "SNAGGEON PORTFOLIO",
+  title: "FrontEnd Developer Portfolio",
+  description: "Developer YangSangGeon",
 };
 
 export default function RootLayout({ children }) {

@@ -88,7 +88,7 @@ export default function page(props) {
       step: "step2",
       per: "50%",
       text: "TTMIK은 100만 유튜브 TALK TO ME IN KOREAN의 학습어플리케이션입니다. 자체적으로 제작하는 책을 읽고 듣고 문제를 풀며 학습할 수 있도록 개발되고 있습니다.(개발중)",
-      link: '#',
+      link: "#",
     },
     {
       id: "img02",
@@ -101,7 +101,7 @@ export default function page(props) {
       step: "step2-4",
       per: "100%",
       text: "금강회계법인의 소개사이트를 아임웹을 이용하여 개발했습니다.",
-      link: '#',
+      link: "#",
     },
     {
       id: "img03",
@@ -114,7 +114,7 @@ export default function page(props) {
       step: "step2",
       per: "70%",
       text: "아비스몰웹앱은 현대모비스 앱 내부에 자동차용품이나 썬팅과 같은 서비스를 구매하는 사이트입니다. 현대의 아이덴티티와 같은 디자인을 통일되게 적용하여 디자인하였습니다.",
-      link: '#'
+      link: "#",
     },
     {
       id: "img04",
@@ -127,7 +127,7 @@ export default function page(props) {
       step: "step3",
       per: "100%",
       text: "청년DB는 국무조정실에서 관리하는 청년과 정책담당자를 이어주는 쌍방향 매칭 플랫폼입니다. WA인증을 위해 웹표준과 웹접근성에 맞도록 개발하였습니다.",
-      link: '#'
+      link: "#",
     },
     {
       id: "img05",
@@ -140,7 +140,7 @@ export default function page(props) {
       step: "step2",
       per: "5%",
       text: "시나몬은 신한은행에서 개발한 메타버스 서비스입니다. 서비스 UI중 아이콘 디자인과 홍보배너 디자인에 참여했습니다.",
-      link: '#'
+      link: "#",
     },
     {
       id: "img06",
@@ -153,7 +153,7 @@ export default function page(props) {
       step: "step3-4",
       per: "70%",
       text: "카페24의 레퍼런스 구매 후 수정하여 아비스몰 쇼핑몰 사이트를 개발했습니다.",
-      link: '#'
+      link: "#",
     },
     {
       id: "img07",
@@ -166,7 +166,7 @@ export default function page(props) {
       step: "step3",
       per: "70%",
       text: "온라인으로 개최된 2022 공직박람회는 도트게임풍의 독특한 UI를 여러 디바이스에 대응하여 제대로 반응형이 되게 하는 것에 집중하여 개발되었습니다.",
-      link: '#'
+      link: "#",
     },
     {
       id: "img08",
@@ -179,7 +179,7 @@ export default function page(props) {
       step: "step2-3",
       per: "100%",
       text: "HOOK는 인디음원을 펀딩구매 및 등록할 수 있는 플랫폼입니다. 사용자, 업로더, 관리자에 맞춰 다른 디자인으로 개발되었습니다.",
-      link: '#'
+      link: "#",
     },
     {
       id: "img09",
@@ -192,7 +192,7 @@ export default function page(props) {
       step: "step3-4",
       per: "100%",
       text: "오늘의 나 SNS 관리자페이지를 리액트를 이용하여 프론트엔드 개발했습니다.",
-      link: '#'
+      link: "#",
     },
     {
       id: "img10",
@@ -205,7 +205,7 @@ export default function page(props) {
       step: "step1-5",
       per: "100%",
       text: "제이로그는 현재 1인개발중인 기독교 묵상 어플리케이션으로 현재 배포중 에러로 수정중에 있습니다.",
-      link: '#'
+      link: "#",
     },
     {
       id: "img11",
@@ -218,7 +218,7 @@ export default function page(props) {
       step: "step2-4",
       per: "100%",
       text: "인테리어 업체 상상아이디의 회사소개 페이지를 그누보드를 이용해 개발했습니다.",
-      link: '#'
+      link: "#",
     },
     {
       id: "img12",
@@ -231,7 +231,7 @@ export default function page(props) {
       step: "step1-3",
       per: "50%",
       text: "올댓펫은 SNS, 쇼핑, 커뮤니티 기능을 가진 펫 인테리어플랫폼입니다. 기획에 일부 참여했으며 디자인, 마크업을 담당해 개발했습니다.",
-      link: '#'
+      link: "#",
     },
   ];
 
@@ -360,7 +360,7 @@ export default function page(props) {
           </h2>
           <div className="portfolio-skill">
             {thisCategory?.stack.map((item, index) => {
-              return <p>{item}</p>;
+              return <p key={index}>{item}</p>;
             })}
           </div>
           <ul className="portfolio-data">
@@ -399,15 +399,19 @@ export default function page(props) {
               <div className="step-bar-inner"></div>
             </div>
           </div>
-          {thisCategory?.link&&<Link
-            className="btn-bk"
-            data-cursor="block"
-            href={thisCategory?.link}
-          >
-            LINK
-            <img src="/icon_down_btn.svg" alt="포트폴리오 상세페이지로 이동" />
-          </Link>}
-          
+          {thisCategory?.link && (
+            <Link
+              className="btn-bk"
+              data-cursor="block"
+              href={thisCategory?.link}
+            >
+              LINK
+              <img
+                src="/icon_down_btn.svg"
+                alt="포트폴리오 상세페이지로 이동"
+              />
+            </Link>
+          )}
         </div>
       </div>
       <div className="portfolio-contents__bottom">

@@ -241,7 +241,7 @@ export default function page() {
           <p className="contents-title">CAREER</p>
           <ul>
             <li>
-              <p>콜라보스튜디오</p>
+              <p>(주)이노베이션티</p>
               <p>웹에이전시</p>
               <p>대리</p>
               <p>2021. 3 ~ </p>

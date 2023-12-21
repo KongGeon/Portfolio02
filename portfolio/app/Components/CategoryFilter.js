@@ -21,6 +21,7 @@ const CategoryFilter = ({
         <Link
           key={idx}
           href="#"
+          scroll={false}
           data-cursor="block"
           className={
             category.includes(item.value) || item.value === category
@@ -58,6 +59,7 @@ const CategoryFilter = ({
         <Link
           key={idx}
           href="#"
+          scroll={false}
           data-cursor="block"
           className={
             item.value === category

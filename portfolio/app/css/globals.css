@@ -32,6 +32,7 @@ body,
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 img,
 picture,
@@ -373,6 +374,7 @@ footer p {
   border-bottom: 1px solid #fff;
   background-color: var(--black);
   margin-bottom: 1px;
+  border-radius: 0;
 }
 .contact-body input:-webkit-autofill,
 .contact-body input:-webkit-autofill:hover,
@@ -397,12 +399,13 @@ footer p {
   color: var(--GRAY, #74726f);
 }
 .contact-body > a {
-  padding: 16px 42px;
+  padding: 11px 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #fff;
   color: #fff;
+  border-radius: 0;
 }
 .contact-body > a img {
   margin-left: 4px;
@@ -512,28 +515,28 @@ footer p {
   .header__right {
     padding: 0 8px;
   }
-  .s__container{
+  .s__container {
     margin-top: 97px;
     margin-left: 0;
   }
-  .header__right > div > a{
+  .header__right > div > a {
     padding: 14px 8px;
     display: inline-block;
   }
   .header__right > img {
     width: 14px;
   }
-  .header__right > div{
+  .header__right > div {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: calc(100% - 40px);
   }
-  .contact-bar{
+  .contact-bar {
     grid-template-columns: 1fr;
     padding-left: 0;
   }
-  .header__right .contact-wrap{
+  .header__right .contact-wrap {
     display: block;
   }
 }
