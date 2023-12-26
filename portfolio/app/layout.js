@@ -1,6 +1,7 @@
 import "./css/globals.css";
 import Link from "next/link";
 import Contact from "./Components/Contact";
+
 export const metadata = {
   title: "FrontEnd Developer Portfolio",
   description: "Developer YangSangGeon",

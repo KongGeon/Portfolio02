@@ -21,11 +21,11 @@ export default function page() {
     const user = navigator.userAgent;
     if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
       setMobile(false);
-      console.log("모바일임");
+      // console.log("모바일임");
     } else {
-      console.log("PC임");
+      // console.log("PC임");
       //마우스포인터
-      console.log("포인터온");
+      // console.log("포인터온");
       initCursor({
         enableAutoTextCursor: true,
         enableLighting: true,
@@ -202,7 +202,7 @@ export default function page() {
   }, [category]);
 
   useEffect(() => {
-    console.log("story");
+    // console.log("story");
     document.querySelector("header").classList.remove("active-on");
 
     // 텍스트이동바
@@ -214,7 +214,7 @@ export default function page() {
     let imgMaxNum = images.length;
     const imageInterval = setInterval(() => {
       setImages((prevImages) => {
-        console.log(prevImages[imgNum]);
+        // console.log(prevImages[imgNum]);
         const updatedImages = [
           ...prevImages,
           prevImages[imgNum],

@@ -21,11 +21,11 @@ export default function page(props) {
     const user = navigator.userAgent;
     if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
       setMobile(false);
-      console.log("모바일임");
+      // console.log("모바일임");
     } else {
-      console.log("PC임");
+      // console.log("PC임");
       //마우스포인터
-      console.log("포인터온");
+      // console.log("포인터온");
       initCursor({
         enableAutoTextCursor: true,
         enableLighting: true,
@@ -279,7 +279,7 @@ export default function page(props) {
 
   useEffect(() => {
     setThisPage(props.params.id);
-    console.log("현재페이지", props.params.id);
+    // console.log("현재페이지", props.params.id);
     let arr = categoryList.find((e) => {
       if (e.id === props.params.id) {
         return true;
@@ -296,8 +296,8 @@ export default function page(props) {
     setThisCategory(arr);
   }, [thisPage]);
 
-  console.log(thisCategory);
-  console.log(thisCategory && thisCategory.imgDetail);
+  // console.log(thisCategory);
+  // console.log(thisCategory && thisCategory.imgDetail);
   const [multiCategory, setMultiCatecory] = useState("all");
   const [showMultiList, setMultiShowList] = useState(categoryList);
   const getCategory = (item, index) => {
@@ -349,9 +349,9 @@ export default function page(props) {
     setTimeout(() => {
       const user = navigator.userAgent;
       if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
-        console.log("포인터 오프");
+        // console.log("포인터 오프");
       } else {
-        console.log("포인터 다시 온");
+        // console.log("포인터 다시 온");
         disposeCursor();
         initCursor({
           enableAutoTextCursor: true,
@@ -387,7 +387,7 @@ export default function page(props) {
           {thisCategory && (
             <img
               src={"/" + thisCategory?.imgDetail}
-              alt={thisCategory?.imgName + "이미지"}
+              alt={thisCategory?.imgName + " 이미지"}
             />
           )}
         </div>
