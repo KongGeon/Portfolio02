@@ -156,10 +156,16 @@
   }
   .story-contents > div {
     height: auto;
+    border-right: 1px solid var(--black);
   }
   .story-contents > .story-contents__left {
     padding-top: 70px;
     padding-bottom: 50px;
+    border-bottom: 1px solid var(--black);
+  }
+  .move-text-wrap > div,
+  .story-contents__bottom {
+    border-right: 1px solid var(--black);
   }
   .category01 {
     grid-template-columns: 1fr 1fr 1fr 1fr;

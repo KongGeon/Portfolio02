@@ -259,7 +259,7 @@ export default function page() {
               <p>광고대행사</p>
               <p>사원</p>
               <p>2016.4 ~ 2019.3</p>
-              <p>옥외광고디자인</p>
+              <p>광고디자인</p>
             </li>
           </ul>
         </div>

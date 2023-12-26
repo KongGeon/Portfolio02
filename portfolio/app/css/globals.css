@@ -375,6 +375,8 @@ footer p {
   background-color: var(--black);
   margin-bottom: 1px;
   border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
 }
 .contact-body input:-webkit-autofill,
 .contact-body input:-webkit-autofill:hover,
@@ -538,5 +540,9 @@ footer p {
   }
   .header__right .contact-wrap {
     display: block;
+  }
+  footer {
+    border-top: 0;
+    border-right: 1px solid var(--black);
   }
 }

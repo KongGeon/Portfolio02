@@ -9,7 +9,7 @@
   border-bottom: 1px solid var(--BG); */
   min-height: 590px;
   overflow: auto;
-  height: calc(100vh - 366px);
+  height: calc(100vh - 369px);
 }
 .portfolio-contents__left img {
   width: 100%;
@@ -196,9 +196,10 @@
     height: auto;
     padding-bottom: 50px;
     min-height: initial;
+    border-right: 1px solid var(--black);
   }
   .category-child + .category-child {
-    margin-left: 8px;
+    margin-left: 4px;
   }
   .category02 > a {
     width: 80px;
@@ -207,8 +208,10 @@
   .portfolio-contents__bottom {
     border-bottom: 1px solid var(--black);
     padding-right: 0;
+    border-right: 1px solid var(--black);
   }
   .portfolio-contents__left {
     height: auto;
+    min-height: auto;
   }
 }

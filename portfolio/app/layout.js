@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
               <Link data-cursor="block" href="/sanggeon/story">
                 STORY
               </Link>
-              <Link data-cursor="block" href="/sanggeon/portfolio/img01">
+              <Link data-cursor="block" href="/sanggeon/portfolio/img13">
                 Portfolio
               </Link>
               <Contact></Contact>

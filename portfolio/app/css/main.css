@@ -340,4 +340,11 @@
   .home .swiper-button-prev {
     background: url(/icon_swiper_left_hover.svg);
   }
+  .main-contents__right-top {
+    border-right: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
+  }
+  .swiper-slide {
+    border-right: 1px solid var(--black);
+  }
 }

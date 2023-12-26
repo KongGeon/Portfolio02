@@ -56,16 +56,52 @@ export default function Home() {
   };
   const [categoryList, setCategoryList] = useState([
     {
-      id: "si",
-      category: "design,markup,front",
-      imgName: "SI",
-      imgFileName: "img_portfolio_SI.svg",
-      imgDetail: "img_portfolio_detailSI.png",
+      id: "img13",
+      category: "design,markup",
+      imgName: "KOCAS 암생존자헬스케어연구단",
+      imgFileName: "img_portfolio13.png",
+      imgDetail: "img_portfolio_detail13.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA", "전자정부프레임워크", "JAVASCRIPT", "JQUERY"],
+      step: "step2-3",
+      per: "100%",
+      text: "",
+    },
+    {
+      id: "img14",
+      category: "design,markup",
+      imgName: "AICA 안심구역포털",
+      imgFileName: "img_portfolio14.png",
+      imgDetail: "img_portfolio_detail14.png",
       date: "2022.12 ~ 2023.12",
       stack: ["PIGMA", "전자정부프레임워크", "JAVASCRIPT", "JQUERY", "REACT"],
+      step: "step2-3",
+      per: "100%",
+      text: "",
+    },
+    {
+      id: "img15",
+      category: "design,markup",
+      imgName: "건국대학교 데이터 심의포털",
+      imgFileName: "img_portfolio15.png",
+      imgDetail: "img_portfolio_detail15.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA", "전자정부프레임워크", "JAVASCRIPT", "JQUERY"],
+      step: "step2-3",
+      per: "70%",
+      text: "",
+    },
+    {
+      id: "img16",
+      category: "design,markup,front",
+      imgName: "OPENLAB",
+      imgFileName: "img_portfolio16.png",
+      imgDetail: "img_portfolio_detail16.png",
+      date: "2022.12 ~ 2023.12",
+      stack: ["PIGMA", "전자정부프레임워크", "JAVASCRIPT", "JQUERY"],
       step: "step2-4",
-      per: "-",
-      text: "공공기관 사이트 제작 참여 / 건양대 / 오픈랩 / AICA / KISTI / KOCAS",
+      per: "40%",
+      text: "",
     },
     {
       id: "img01",
@@ -304,7 +340,7 @@ export default function Home() {
 
   // 텍스트 타이핑 효과
 
-  const textList = ["FrontEnd", "Big", "Strong"];
+  const textList = ["FrontEnd", "UI/UX", "React", "homebody"];
   const [actionText, setActionText] = useState("");
   const [count, setCount] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
@@ -410,7 +446,7 @@ export default function Home() {
               <p className="typing"></p>Developer
             </h2>
             <span>
-              디자인부터 프론트엔드까지 가능한 개발자 양상건입니다.
+              안녕하세요! 프론트엔드 개발자 양상건입니다.
               <br />
               저에게 관심이 있거나 궁금한 점이 있으신 분은 상단의 'CONTACT'
               메뉴를 통해 메일을 보내주세요! :)
