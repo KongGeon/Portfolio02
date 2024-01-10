@@ -207,7 +207,7 @@ export default function page(props) {
     {
       id: "img08",
       category: "design,markup",
-      imgName: "인드음악플랫폼 웹&웹앱",
+      imgName: "인디음악플랫폼 웹&웹앱",
       imgFileName: "img_portfolio08.png",
       imgDetail: "img_portfolio_detail08.png",
       date: "2022.7 ~ 2022.12",

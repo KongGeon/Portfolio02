@@ -198,7 +198,7 @@ export default function Home() {
     {
       id: "img08",
       category: "design,markup",
-      imgName: "인드음악플랫폼 웹&웹앱",
+      imgName: "인디음악플랫폼 웹&웹앱",
       imgFileName: "img_portfolio08.png",
       imgDetail: "img_portfolio_detail08.png",
       date: "2022.7 ~ 2022.12",
@@ -341,7 +341,7 @@ export default function Home() {
 
   // 텍스트 타이핑 효과
 
-  const textList = ["FrontEnd", "UI/UX", "React", "homebody"];
+  const textList = ["FrontEnd", "UI/UX", "React", "Homebody", "Mark Up"];
   const [actionText, setActionText] = useState("");
   const [count, setCount] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
@@ -447,7 +447,7 @@ export default function Home() {
               <p className="typing"></p>Developer
             </h2>
             <span>
-              안녕하세요! 프론트엔드 개발자 양상건입니다.
+              안녕하세요! 디자이너 & 프론트엔드개발자 양상건입니다.
               <br />
               저에게 관심이 있거나 궁금한 점이 있으신 분은 상단의 'CONTACT'
               메뉴를 통해 메일을 보내주세요! :)
