@@ -60,8 +60,8 @@ export default function page() {
       value: "design",
     },
     {
-      name: "PRONT",
-      value: "pront",
+      name: "Front",
+      value: "front",
     },
     {
       name: "BACK",
@@ -95,37 +95,37 @@ export default function page() {
       imgFileName: "img_fi.png",
     },
     {
-      category: "pront",
+      category: "front",
       imgName: "HTML",
       imgFileName: "img_html.png",
     },
     {
-      category: "pront",
+      category: "front",
       imgName: "CSS",
       imgFileName: "img_css.png",
     },
     {
-      category: "pront",
+      category: "front",
       imgName: "자바스크립트",
       imgFileName: "img_js.png",
     },
     {
-      category: "pront",
+      category: "front",
       imgName: "제이쿼리",
       imgFileName: "img_jq.png",
     },
     {
-      category: "pront",
+      category: "front",
       imgName: "넥스트js",
       imgFileName: "img_next.png",
     },
     {
-      category: "pront",
+      category: "front",
       imgName: "리액트",
       imgFileName: "img_react.png",
     },
     {
-      category: "pront",
+      category: "front",
       imgName: "리액트네이티브",
       imgFileName: "img_react_native.png",
     },

@@ -56,8 +56,8 @@ export default function page(props) {
       value: "markup",
     },
     {
-      name: "PRONT",
-      value: "pront",
+      name: "Front",
+      value: "front",
     },
     {
       name: "BACK",
@@ -111,7 +111,7 @@ export default function page(props) {
       stack: ["PIGMA", "전자정부프레임워크", "JAVASCRIPT", "JQUERY"],
       step: "step2-4",
       per: "40%",
-      text: "UI/UX 설계, UI/UX 디자인, Markup, 게시판·일정 등 prontend 개발",
+      text: "UI/UX 설계, UI/UX 디자인, Markup, 게시판·일정 등 frontend 개발",
     },
     {
       id: "img01",
@@ -128,7 +128,7 @@ export default function page(props) {
     },
     {
       id: "img02",
-      category: "design,pront,back",
+      category: "design,front,back",
       imgName: "금강회계법인",
       imgFileName: "img_portfolio02.png",
       imgDetail: "img_portfolio_detail02.png",
@@ -219,7 +219,7 @@ export default function page(props) {
     },
     {
       id: "img09",
-      category: "markup,pront",
+      category: "markup,front",
       imgName: "오늘의나 관리자페이지",
       imgFileName: "img_portfolio09.png",
       imgDetail: "img_portfolio_detail09.png",
@@ -232,7 +232,7 @@ export default function page(props) {
     },
     {
       id: "img10",
-      category: "plan,design,markup,pront,back",
+      category: "plan,design,markup,front,back",
       imgName: "제이로그",
       imgFileName: "img_portfolio10.png",
       imgDetail: "img_portfolio_detail10.png",
@@ -245,7 +245,7 @@ export default function page(props) {
     },
     {
       id: "img11",
-      category: "design,markup,pront,back",
+      category: "design,markup,front,back",
       imgName: "상상아이디",
       imgFileName: "img_portfolio11.png",
       imgDetail: "img_portfolio_detail11.png",
