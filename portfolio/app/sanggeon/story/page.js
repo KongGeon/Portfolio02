@@ -160,21 +160,21 @@ export default function page() {
       imgName: "프리미어프로",
       imgFileName: "img_pr.png",
     },
-    {
-      category: "etc",
-      imgName: "VSCODE",
-      imgFileName: "img_vs.png",
-    },
-    {
-      category: "etc",
-      imgName: "그누보드",
-      imgFileName: "img_gnu.png",
-    },
-    {
-      category: "etc",
-      imgName: "카페24",
-      imgFileName: "img_cafe24.png",
-    },
+    // {
+    //   category: "etc",
+    //   imgName: "VSCODE",
+    //   imgFileName: "img_vs.png",
+    // },
+    // {
+    //   category: "etc",
+    //   imgName: "그누보드",
+    //   imgFileName: "img_gnu.png",
+    // },
+    // {
+    //   category: "etc",
+    //   imgName: "카페24",
+    //   imgFileName: "img_cafe24.png",
+    // },
   ];
 
   //tap
