@@ -130,6 +130,11 @@ export default function page() {
       imgFileName: "img_react_native.png",
     },
     {
+      category: "front",
+      imgName: "Vercel",
+      imgFileName: "img_vercel.png",
+    },
+    {
       category: "back",
       imgName: "몽고DB",
       imgFileName: "img_mong.png",

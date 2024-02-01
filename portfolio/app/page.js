@@ -57,6 +57,30 @@ export default function Home() {
   };
   const [categoryList, setCategoryList] = useState([
     {
+      id: "img18",
+      category: "design,markup,front",
+      imgName: "포트폴리오 사이트",
+      imgFileName: "img_portfolio18.png",
+      imgDetail: "img_portfolio_detail18.png",
+      date: "2024.1 ~ 2024.1",
+      stack: ["PIGMA", "NEXTjs", "Vercel"],
+      step: "step1-4",
+      per: "100%",
+      text: "기획, UI/UX 설계, UI/UX 디자인, Markup, frontend 개발",
+    },
+    {
+      id: "img17",
+      category: "design,markup,front",
+      imgName: "MarkUp",
+      imgFileName: "img_portfolio17.png",
+      imgDetail: "img_portfolio_detail17.png",
+      date: "2023.10 ~ 2023.12",
+      stack: ["PIGMA", "NEXTjs", "Vercel"],
+      step: "step1-4",
+      per: "100%",
+      text: "기획, UI/UX 설계, UI/UX 디자인, Markup, frontend 개발",
+    },
+    {
       id: "img13",
       category: "design,markup",
       imgName: "KOCAS 암생존자헬스케어연구단",
@@ -102,7 +126,7 @@ export default function Home() {
       stack: ["PIGMA", "전자정부프레임워크", "JAVASCRIPT", "JQUERY"],
       step: "step2-4",
       per: "40%",
-      text: "UI/UX 설계, UI/UX 디자인, Markup, 게시판·일정 등 prontend 개발",
+      text: "UI/UX 설계, UI/UX 디자인, Markup, 게시판·일정 등 frontend 개발",
     },
     {
       id: "img01",
@@ -119,7 +143,7 @@ export default function Home() {
     },
     {
       id: "img02",
-      category: "design,pront,back",
+      category: "design,front,back",
       imgName: "금강회계법인",
       imgFileName: "img_portfolio02.png",
       imgDetail: "img_portfolio_detail02.png",
@@ -210,7 +234,7 @@ export default function Home() {
     },
     {
       id: "img09",
-      category: "markup,pront",
+      category: "markup,front",
       imgName: "오늘의나 관리자페이지",
       imgFileName: "img_portfolio09.png",
       imgDetail: "img_portfolio_detail09.png",
@@ -223,7 +247,7 @@ export default function Home() {
     },
     {
       id: "img10",
-      category: "plan,design,markup,pront,back",
+      category: "plan,design,markup,front,back",
       imgName: "제이로그",
       imgFileName: "img_portfolio10.png",
       imgDetail: "img_portfolio_detail10.png",
@@ -236,7 +260,7 @@ export default function Home() {
     },
     {
       id: "img11",
-      category: "design,markup,pront,back",
+      category: "design,markup,front,back",
       imgName: "상상아이디",
       imgFileName: "img_portfolio11.png",
       imgDetail: "img_portfolio_detail11.png",

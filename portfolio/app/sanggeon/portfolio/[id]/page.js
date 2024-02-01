@@ -66,6 +66,33 @@ export default function page(props) {
   ];
   const categoryList = [
     {
+      id: "img18",
+      category: "design,markup,front",
+      imgName: "포트폴리오 사이트",
+      imgFileName: "img_portfolio18.png",
+      imgDetail: "img_portfolio_detail18.png",
+      date: "2024.1 ~ 2024.1",
+      stack: ["PIGMA", "NEXTjs", "Vercel"],
+      step: "step1-4",
+      per: "100%",
+      text: "기획, UI/UX 설계, UI/UX 디자인, Markup, frontend 개발",
+      link: "https://portfolio-ebon-one-82.vercel.app/sanggeon/home"
+    },
+    {
+      id: "img17",
+      category: "design,markup,front",
+      imgName: "MarkUp",
+      imgFileName: "img_portfolio17.png",
+      imgDetail: "img_portfolio_detail17.png",
+      date: "2023.10 ~ 2023.12",
+      stack: ["PIGMA", "NEXTjs", "Vercel"],
+      step: "step1-4",
+      per: "100%",
+      text: "기획, UI/UX 설계, UI/UX 디자인, Markup, frontend 개발",
+      link: "https://mark-up-mu.vercel.app/"
+
+    },
+    {
       id: "img13",
       category: "design,markup",
       imgName: "KOCAS 암생존자헬스케어연구단",
