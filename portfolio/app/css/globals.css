@@ -29,6 +29,12 @@ body,
 * {
   cursor: none !important;
 }
+::-webkit-scrollbar-thumb {
+  cursor: n-resize !important;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  cursor: w-resize !important;
+}
 html,
 body {
   height: 100%;
@@ -496,9 +502,17 @@ footer p {
 .contact-bar.active-on {
   background-color: rgba(37, 37, 37, 0.3);
 }
-@media all and (max-width: 767px) {
+
+.mobile-only {
+  display: none;
 }
 @media all and (max-width: 767px) {
+  .pc-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
   header {
     padding-left: 0;
     grid-template-columns: 1fr;
@@ -518,7 +532,7 @@ footer p {
     padding: 0 8px;
   }
   .s__container {
-    margin-top: 97px;
+    margin-top: 85px;
     margin-left: 0;
   }
   .header__right > div > a {
@@ -544,5 +558,8 @@ footer p {
   footer {
     border-top: 0;
     border-right: 1px solid var(--black);
+  }
+  .portfolio-title {
+    font-size: 28px;
   }
 }

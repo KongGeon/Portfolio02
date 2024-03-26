@@ -630,9 +630,13 @@ function registerLinkNode(_node) {
  */
 function registerBlockNode(_node) {
   const node = _node;
-  node.addEventListener("mouseenter", onBlockEnter, { passive: true });
-  node.addEventListener("mousemove", onBlockMove, { passive: true });
-  node.addEventListener("mouseleave", onBlockLeave, { passive: true });
+  if (!node.classList.contains("pointer-action")) {
+    node.addEventListener("mouseenter", onBlockEnter, { passive: true });
+    node.addEventListener("mousemove", onBlockMove, { passive: true });
+    node.addEventListener("mouseleave", onBlockLeave, { passive: true });
+    node.classList.add("pointer-action");
+  }
+
   let timer;
   function toggleBlockActive(active) {
     isBlockActive = !!active;
@@ -673,10 +677,11 @@ function registerBlockNode(_node) {
       else radius = `calc(${paddingCss} + ${nodeRadius})`;
       updateStyleObj.radius = radius;
     }
+
     updateCursorStyle("--cursor-x", `${rect.left + rect.width / 2}px`);
     updateCursorStyle("--cursor-y", `${rect.top + rect.height / 2}px`);
-    updateCursorStyle("--cursor-width", `${rect.width + padding * 2}px`);
-    updateCursorStyle("--cursor-height", `${rect.height + padding * 2}px`);
+    updateCursorStyle("--cursor-width", `${rect.width + padding * 3}px`);
+    updateCursorStyle("--cursor-height", `${rect.height + padding * 3}px`);
     const styleToUpdate = {
       ...updateStyleObj,
       ...extractCustomStyle(node),

@@ -71,7 +71,7 @@ export default function Home() {
     {
       id: "img17",
       category: "design,markup,front",
-      imgName: "MarkUp",
+      imgName: "Knock MarkUp",
       imgFileName: "img_portfolio17.png",
       imgDetail: "img_portfolio_detail17.png",
       date: "2023.10 ~ 2023.12",
@@ -365,7 +365,7 @@ export default function Home() {
 
   // 텍스트 타이핑 효과
 
-  const textList = ["FrontEnd", "UI/UX", "React", "Homebody", "Mark Up"];
+  const textList = ["Web", "FrontEnd", "UI/UX", "React", "Homebody", "Mark Up"];
   const [actionText, setActionText] = useState("");
   const [count, setCount] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
@@ -471,12 +471,20 @@ export default function Home() {
               <p className="typing"></p>Developer
             </h2>
             <span>
-              안녕하세요! 디자이너 & 프론트엔드개발자 양상건입니다.
+              홈페이지 하나 만드는데 너무 복잡하시죠?
+              <br />
+              따로 공부하지 않으셔도 됩니다. <br />
+              비지니스에 도움이 되는 홈페이지 제가 먼저 제안드리겠습니다.
+              {/* 안녕하세요! 디자이너 & 프론트엔드개발자 양상건입니다.
               <br />
               저에게 관심이 있거나 궁금한 점이 있으신 분은 상단의 'CONTACT'
-              메뉴를 통해 메일을 보내주세요! :)
+              메뉴를 통해 메일을 보내주세요! :) */}
             </span>
-            <Link className="btn-bk" data-cursor="block" href="story">
+            <Link
+              className="btn-bk"
+              data-cursor="block"
+              href="/knockplace/story"
+            >
               STORY
               <img src="/icon_down_btn.svg" alt="스토리이동" />
             </Link>

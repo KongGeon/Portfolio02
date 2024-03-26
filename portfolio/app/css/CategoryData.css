@@ -48,7 +48,10 @@
 .category-box {
   transition: all 0.3s;
 }
-
+.category01 .category-box {
+  border-right: 1px solid var(--main);
+  border-bottom: 1px solid var(--main);
+}
 .category02 {
   display: flex;
   align-items: center;

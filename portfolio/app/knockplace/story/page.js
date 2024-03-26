@@ -244,12 +244,18 @@ export default function page() {
       <div className="story-contents">
         <div className="story-contents__left">
           <p className="contents-title">CAREER</p>
-          <ul>
+          <img className="pc-only" src="/img_career.png" alt="주요거래처" />
+          <img
+            className="mobile-only"
+            src="/img_career_mobile.png"
+            alt="주요거래처"
+          />
+          {/* <ul>
             <li>
               <p>(주)이노베이션티</p>
               <p>웹에이전시</p>
               <p>대리</p>
-              <p>2021. 3 ~ </p>
+              <p>2021. 3 ~ 2024. 4</p>
               <p>웹디자인/프론트엔드</p>
             </li>
             <li>
@@ -266,7 +272,7 @@ export default function page() {
               <p>2016.4 ~ 2019.3</p>
               <p>광고디자인</p>
             </li>
-          </ul>
+          </ul> */}
         </div>
         <div className="story-contents__right">
           <p className="contents-title">TOOL</p>
