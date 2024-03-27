@@ -69,10 +69,19 @@ export default function Contact() {
                 SEND
               </button>
             </form>
-            <a href="https://github.com/KongGeon" data-cursor="block">
-              GITHUB
-              <img src="/icon_github_w.svg" alt="깃허브바로가기" />
-            </a>
+            <div className="contact-bottom-btn">
+              <a
+                download={true}
+                href="/download/웹사이트에_꼭_필요한_5가지.pdf"
+                data-cursor="block"
+              >
+                TIP. 웹사이트에 꼭 필요한 5가지 다운로드
+              </a>
+              <a href="https://github.com/KongGeon" data-cursor="block">
+                GITHUB
+                <img src="/icon_github_w.svg" alt="깃허브바로가기" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

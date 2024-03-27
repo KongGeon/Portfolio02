@@ -359,7 +359,7 @@ footer p {
 .contact-body form {
   display: flex;
   flex-direction: column;
-  height: calc(100% - 56px);
+  height: calc(100% - 120px);
   justify-content: center;
   border-top: 1px solid #fff;
 }
@@ -407,8 +407,16 @@ footer p {
 .contact-body input::placeholder {
   color: var(--GRAY, #74726f);
 }
-.contact-body > a {
+.contact-bottom-btn {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.contact-body .contact-bottom-btn a {
   padding: 11px 42px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -416,7 +424,8 @@ footer p {
   color: #fff;
   border-radius: 0;
 }
-.contact-body > a img {
+
+.contact-body .contact-bottom-btn a img {
   margin-left: 4px;
 }
 .contact-body .send-btn {
