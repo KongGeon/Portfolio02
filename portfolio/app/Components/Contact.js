@@ -7,14 +7,15 @@ export default function Contact() {
   const [showContact, setShowContact] = useState("none");
 
   const handleClick = () => {
-    alert('성공적으로 메일을 전송했습니다.')
-  }
+    alert("성공적으로 메일을 전송했습니다.");
+  };
 
   return (
     <>
       <Link
         data-cursor="block"
         href="#"
+        className="contact"
         onClick={() => {
           setShowContact("grid");
           setAnimationContact("active-on");

@@ -365,7 +365,24 @@ export default function Home() {
 
   // 텍스트 타이핑 효과
 
-  const textList = ["Web", "FrontEnd", "UI/UX", "React", "Homebody", "Mark Up"];
+  // const textList = [
+  //   "Web",
+  //   "FrontEnd",
+  //   "UI/UX",
+  //   "React",
+  //   "Homebody",
+  //   "Mark Up",
+  // ];
+  const textList = [
+    "공공기관",
+    "병원",
+    "변호사, 법무사",
+    "인테리어",
+    "뷰티",
+    "제조업",
+    "프렌차이즈",
+    "모든 회사",
+  ];
   const [actionText, setActionText] = useState("");
   const [count, setCount] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
@@ -468,7 +485,9 @@ export default function Home() {
             <p className="contents-title">ABOUT</p>
             <h2>
               {actionText}
-              <p className="typing"></p>Developer
+              <p className="typing"></p>
+              {/* Developer */}
+              홈페이지
             </h2>
             <span>
               홈페이지 하나 만드는데 너무 복잡하시죠?
@@ -480,14 +499,22 @@ export default function Home() {
               저에게 관심이 있거나 궁금한 점이 있으신 분은 상단의 'CONTACT'
               메뉴를 통해 메일을 보내주세요! :) */}
             </span>
-            <Link
+            {/* <Link
               className="btn-bk"
               data-cursor="block"
               href="/knockplace/story"
             >
               STORY
               <img src="/icon_down_btn.svg" alt="스토리이동" />
-            </Link>
+            </Link> */}
+            <button
+              className="btn-bk"
+              data-cursor="block"
+              onClick={() => document.querySelector(".contact").click()}
+            >
+              CONTACT
+              <img src="/icon_down_btn.svg" alt="문의하기" />
+            </button>
           </div>
           <div className="main-contents__right-bottom">
             <video muted autoPlay loop playsInline>

@@ -432,10 +432,11 @@ export default function page(props) {
               <span>작업일</span>
               <p>{thisCategory?.date}</p>
             </li>
-            <li>
+            {/* 회사페이지에서는 제외 */}
+            {/* <li>
               <span>기여도</span>
               <p>{thisCategory?.per}</p>
-            </li>
+            </li> */}
           </ul>
           <p className="portfolio-text">{thisCategory?.text}</p>
           <div className={"portfolio-step-wrap " + thisCategory?.step}>

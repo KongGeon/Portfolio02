@@ -303,6 +303,7 @@ footer p {
   background-color: var(--black);
   color: #fff;
   display: inline-flex;
+  align-items: center;
 }
 .btn-bk img {
   margin-left: 4px;
