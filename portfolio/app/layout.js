@@ -10,7 +10,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
-      <head />
+      <head>
+        {/* 구글 검색엔진 */}
+        <meta
+          name="google-site-verification"
+          content="KVRA1l3kW68HU9Gvq4f0tBRu3lYBwLgbKdjrZJ0mfm8"
+        />
+        {/* 네이버 검색엔진 */}
+        <meta
+          name="naver-site-verification"
+          content="6bd0de74e9b5ec69b18d21fb4c614fbdef0b0280"
+        />
+      </head>
       <body>
         <header>
           <div className="header__left">
