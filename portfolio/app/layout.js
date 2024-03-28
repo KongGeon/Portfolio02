@@ -3,8 +3,11 @@ import Link from "next/link";
 import Contact from "./Components/Contact";
 
 export const metadata = {
-  title: "FrontEnd Developer Portfolio",
-  description: "Developer KnockPlace",
+  title: "Konck Place",
+  // title: "FrontEnd Developer Portfolio",
+  // description: "Developer KnockPlace",
+  description: "노크플레이스와 함께 웹사이트 제작",
+  keywords: "웹사이트 제작, 노크플레이스, 아임웹 홈페이지, 홈페이지 제작",
 };
 
 export default function RootLayout({ children }) {
