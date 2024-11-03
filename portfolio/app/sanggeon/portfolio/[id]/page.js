@@ -102,6 +102,7 @@ export default function page(props) {
       step: "step2-3",
       per: "100%",
       text: "UI/UX 설계, UI/UX 디자인, Markup, MDI 시스템 제작",
+      link: "https://kocas.re.kr/",
     },
     {
       id: "img14",
@@ -114,6 +115,7 @@ export default function page(props) {
       step: "step2-3",
       per: "100%",
       text: "Markup 제작, CK에디터 테이블 커스텀 생성 기능 추가(react, js버전)",
+      link: "https://portal.atops.or.kr/saz/saz.do",
     },
     {
       id: "img15",
@@ -469,6 +471,7 @@ export default function page(props) {
               className="btn-bk"
               data-cursor="block"
               href={thisCategory?.link}
+              target="_blank"
             >
               LINK
               <img
