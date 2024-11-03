@@ -76,7 +76,7 @@ export default function page(props) {
       step: "step1-4",
       per: "100%",
       text: "기획, UI/UX 설계, UI/UX 디자인, Markup, frontend 개발",
-      link: "https://knockplace.vercel.app/knockplace/home",
+      link: "https://knockplace.vercel.app/sanggeon/home",
     },
     {
       id: "img17",

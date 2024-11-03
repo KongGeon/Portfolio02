@@ -13,11 +13,18 @@ import { initCursor, updateCursor } from "./Event/cursor";
 
 import MainSwiperData from "./Components/MainSwiperData";
 
+import { usePathname } from "next/navigation";
+
 import "./css/main.css";
 
 export default function Home() {
   // 모바일여부
   const [mobile, setMobile] = useState(true);
+
+  const pathname = usePathname();
+
+  const isKnockplace = pathname.startsWith("/knockplace");
+  const isSanggeon = pathname.startsWith("/sanggeon");
 
   useEffect(() => {
     const user = navigator.userAgent;
@@ -489,16 +496,23 @@ export default function Home() {
               {/* Developer */}
               홈페이지
             </h2>
-            <span>
-              홈페이지 하나 만드는데 너무 복잡하시죠?
-              <br />
-              따로 공부하지 않으셔도 됩니다. <br />
-              비지니스에 도움이 되는 홈페이지 제가 먼저 제안드리겠습니다.
-              {/* 안녕하세요! 디자이너 & 프론트엔드개발자 양상건입니다.
-              <br />
-              저에게 관심이 있거나 궁금한 점이 있으신 분은 상단의 'CONTACT'
-              메뉴를 통해 메일을 보내주세요! :) */}
-            </span>
+            {isKnockplace && (
+              <span>
+                홈페이지 하나 만드는데 너무 복잡하시죠?
+                <br />
+                따로 공부하지 않으셔도 됩니다. <br />
+                비지니스에 도움이 되는 홈페이지 제가 먼저 제안드리겠습니다.
+              </span>
+            )}
+            {isSanggeon && (
+              <span>
+                안녕하세요! 디자이너 & 프론트엔드개발자 양상건입니다.
+                <br />
+                저에게 관심이 있거나 궁금한 점이 있으신 분은
+                <br />
+                'CONTACT' 메뉴를 통해 메일을 보내주세요! :)
+              </span>
+            )}
             {/* <Link
               className="btn-bk"
               data-cursor="block"
