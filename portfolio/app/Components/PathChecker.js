@@ -6,10 +6,10 @@ export default function PathChecker({ children }) {
   const pathname = usePathname();
   let path = "";
 
-  if (pathname.includes("/knockplace")) {
-    path = "knockplace";
-  } else if (pathname.includes("/sanggeon")) {
+  if (pathname.includes("/sanggeon")) {
     path = "sanggeon";
+  } else if (pathname.includes("/") || pathname.includes("/knockplace")) {
+    path = "knockplace";
   } else {
     path = "other";
   }

@@ -115,7 +115,7 @@ export default function page(props) {
       step: "step2-3",
       per: "100%",
       text: "Markup 제작, CK에디터 테이블 커스텀 생성 기능 추가(react, js버전)",
-      link: "https://portal.atops.or.kr/saz/saz.do",
+      link: "https://portal.atops.or.kr/",
     },
     {
       id: "img15",
