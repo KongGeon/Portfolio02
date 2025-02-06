@@ -4,11 +4,10 @@ import Link from "next/link";
 import PathChecker from "./Components/PathChecker";
 
 export const metadata = {
-  title: "노크플레이스",
+  title: "노크플레이스 | 홈페이지 제작작",
   // title: "FrontEnd Developer Portfolio",
   // description: "Developer KnockPlace",
-  description:
-    "최신 디자인과 최적의 기능을 갖춘 맞춤형 솔루션을 제공하며, 무료 상담을 진행하고 있습니다.",
+  description: "당신의 브랜드가 완성되는 또 하나의 공간",
   keywords: "웹사이트 제작, 노크플레이스, 아임웹 홈페이지, 홈페이지 제작",
 };
 
