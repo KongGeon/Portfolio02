@@ -1,14 +1,23 @@
 import "./css/globals.css";
-import Link from "next/link";
 
 import PathChecker from "./Components/PathChecker";
 
 export const metadata = {
-  title: "노크플레이스 | 홈페이지 제작작",
-  // title: "FrontEnd Developer Portfolio",
-  // description: "Developer KnockPlace",
+  title: "노크플레이스 : 당신의 브랜드가 완성되는 또 하나의 공간",
+  siteName: "노크플레이스 | 홈페이지 제작",
   description: "당신의 브랜드가 완성되는 또 하나의 공간",
-  keywords: "웹사이트 제작, 노크플레이스, 아임웹 홈페이지, 홈페이지 제작",
+  keywords: [
+    "웹사이트 제작",
+    "노크플레이스",
+    "아임웹 홈페이지",
+    "홈페이지 제작",
+    "대전 홈페이지",
+    "대전 웹사이트",
+    "랜딩페이지",
+    "knockplace",
+  ],
+
+  ogImage: "/opengraph-image.png",
 };
 
 export default function RootLayout({ children }) {
@@ -79,6 +88,11 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJsonData) }}
+        />
+        <meta property="og:title" content="노크플레이스 | 홈페이지 제작" />
+        <meta
+          property="og:description"
+          content="당신의 브랜드가 완성되는 또 하나의 공간"
         />
       </head>
       <body>
