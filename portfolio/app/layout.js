@@ -84,6 +84,11 @@ export default function RootLayout({ children }) {
           name="naver-site-verification"
           content="6bd0de74e9b5ec69b18d21fb4c614fbdef0b0280"
         />
+        <meta
+          name="naver-site-verification"
+          content="e8278cc56ba3d53fa025f1fb04026a6df682b58d"
+        />
+
         {/* JSON-LD 스크립트 추가 */}
         <script
           type="application/ld+json"
