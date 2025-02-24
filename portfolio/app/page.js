@@ -23,8 +23,9 @@ export default function Home() {
 
   const pathname = usePathname();
 
-  const isKnockplace = pathname.startsWith("/knockplace");
   const isSanggeon = pathname.startsWith("/sanggeon");
+  // const isKnockplace = pathname.startsWith("/knockplace");
+  const isKnockplace = pathname.startsWith("/");
 
   useEffect(() => {
     const user = navigator.userAgent;
@@ -498,10 +499,9 @@ export default function Home() {
             </h2>
             {isKnockplace && (
               <span>
-                홈페이지 하나 만드는데 너무 복잡하시죠?
+                당신의 브랜드가 완성되는 공간
                 <br />
-                따로 공부하지 않으셔도 됩니다. <br />
-                비지니스에 도움이 되는 홈페이지 제가 먼저 제안드리겠습니다.
+                노크플레이스
               </span>
             )}
             {isSanggeon && (

@@ -69,10 +69,6 @@ export default function RootLayout({ children }) {
         {/* 네이버 검색엔진 */}
         <meta
           name="naver-site-verification"
-          content="6bd0de74e9b5ec69b18d21fb4c614fbdef0b0280"
-        />
-        <meta
-          name="naver-site-verification"
           content="e8278cc56ba3d53fa025f1fb04026a6df682b58d"
         />
 
