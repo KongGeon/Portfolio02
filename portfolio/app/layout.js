@@ -3,9 +3,9 @@ import "./css/globals.css";
 import PathChecker from "./Components/PathChecker";
 
 export const metadata = {
-  title: "노크플레이스 : 당신의 브랜드가 완성되는 또 하나의 공간",
+  title: "노크플레이스 : | 홈페이지 제작",
   siteName: "노크플레이스 | 홈페이지 제작",
-  description: "당신의 브랜드가 완성되는 또 하나의 공간",
+  description: "당신의 브랜드가 완성되는 공간",
   keywords: [
     "웹사이트 제작",
     "노크플레이스",
@@ -21,56 +21,43 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  4;
-
   // JSON-LD 데이터 객체 생성
   const ldJsonData = {
     "@context": "http://schema.org",
-    "@graph": [
+    "@type": "ItemList",
+    itemListElement: [
       {
-        "@type": "Person",
-        name: "노크플레이스",
-        url: "https://knockplace.vercel.app/knockplace/home",
-        // sameAs: ["https://www.instagram.com/competo"],
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "Organization",
+          name: "MarkUp",
+          image: "https://knockplace.vercel.app/img_portfolio17.png",
+          url: "https://knockplace.vercel.app/knockplace/portfolio/img17",
+        },
       },
       {
-        "@type": "ItemList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            item: {
-              "@type": "Organization",
-              name: "MarkUp",
-              image: "https://knockplace.vercel.app/img_portfolio17.png",
-              url: "https://knockplace.vercel.app/knockplace/portfolio/img17",
-            },
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            item: {
-              "@type": "Organization",
-              name: "KOCAS",
-              image: "https://knockplace.vercel.app/img_portfolio13.png",
-              url: "https://knockplace.vercel.app/knockplace/portfolio/img13",
-            },
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            item: {
-              "@type": "Organization",
-              name: "AICA",
-              image: "https://knockplace.vercel.app/img_portfolio14.png",
-              url: "https://knockplace.vercel.app/knockplace/portfolio/img14",
-            },
-          },
-        ],
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "Organization",
+          name: "KOCAS",
+          image: "https://knockplace.vercel.app/img_portfolio13.png",
+          url: "https://knockplace.vercel.app/knockplace/portfolio/img13",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@type": "Organization",
+          name: "AICA",
+          image: "https://knockplace.vercel.app/img_portfolio14.png",
+          url: "https://knockplace.vercel.app/knockplace/portfolio/img14",
+        },
       },
     ],
   };
-
   return (
     <html lang="ko">
       <head>
@@ -97,7 +84,7 @@ export default function RootLayout({ children }) {
         <meta property="og:title" content="노크플레이스 | 홈페이지 제작" />
         <meta
           property="og:description"
-          content="당신의 브랜드가 완성되는 또 하나의 공간"
+          content="당신의 브랜드가 완성되는 공간"
         />
       </head>
       <body>
