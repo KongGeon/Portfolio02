@@ -3,9 +3,12 @@ import "./css/globals.css";
 import PathChecker from "./Components/PathChecker";
 
 export const metadata = {
-  title: "노크플레이스 : | 홈페이지 제작",
-  siteName: "노크플레이스 | 홈페이지 제작",
-  description: "당신의 브랜드가 완성되는 공간",
+  metadataBase: new URL("https://www.knockplace.com"),
+  title: {
+    default: "노크플레이스 | 홈페이지·웹사이트 제작",
+    template: "%s | 노크플레이스",
+  },
+  description: "홈페이지, 웹사이트, 개발, 디자인 전문기업입니다.",
   keywords: [
     "웹사이트 제작",
     "노크플레이스",
@@ -14,49 +17,56 @@ export const metadata = {
     "대전 홈페이지",
     "대전 웹사이트",
     "랜딩페이지",
+    "퍼블리싱",
+    "대전 퍼블리싱",
+    "퍼블리셔",
+    "웹디자인",
+    "대전 웹디자인",
+    "대전 디자인",
     "knockplace",
   ],
-
-  ogImage: "/opengraph-image.png",
+  openGraph: {
+    title: "노크플레이스 | 홈페이지 제작",
+    description: "홈페이지, 웹사이트, 개발, 디자인 전문기업입니다.",
+    url: "https://www.knockplace.com",
+    siteName: "노크플레이스",
+    images: [
+      {
+        url: "https://www.knockplace.com/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "노크플레이스 | 홈페이지 제작",
+      },
+    ],
+    type: "website",
+    locale: "ko_KR",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "노크플레이스 | 홈페이지 제작",
+    description: "홈페이지, 웹사이트, 개발, 디자인 전문기업입니다.",
+    images: ["https://www.knockplace.com/opengraph-image.png"],
+  },
+  alternates: {
+    canonical: "https://www.knockplace.com",
+  },
 };
 
 export default function RootLayout({ children }) {
-  // JSON-LD 데이터 객체 생성
+  // JSON-LD 데이터 객체 생성 (Organization - 홈 브랜드 강화용)
   const ldJsonData = {
-    "@context": "http://schema.org",
-    "@type": "ItemList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        item: {
-          "@type": "Organization",
-          name: "MarkUp",
-          image: "https://knockplace.vercel.app/img_portfolio17.png",
-          url: "https://knockplace.vercel.app/knockplace/portfolio/img17",
-        },
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        item: {
-          "@type": "Organization",
-          name: "KOCAS",
-          image: "https://knockplace.vercel.app/img_portfolio13.png",
-          url: "https://knockplace.vercel.app/knockplace/portfolio/img13",
-        },
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        item: {
-          "@type": "Organization",
-          name: "AICA",
-          image: "https://knockplace.vercel.app/img_portfolio14.png",
-          url: "https://knockplace.vercel.app/knockplace/portfolio/img14",
-        },
-      },
-    ],
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "노크플레이스",
+    url: "https://www.knockplace.com",
+    logo: "https://www.knockplace.com/opengraph-image.png",
+    description: "홈페이지, 웹사이트, 개발, 디자인 전문기업입니다.",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "KR",
+      addressRegion: "대전광역시",
+      addressLocality: "서구",
+    },
   };
   return (
     <html lang="ko">
@@ -76,11 +86,6 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJsonData) }}
-        />
-        <meta property="og:title" content="노크플레이스 | 홈페이지 제작" />
-        <meta
-          property="og:description"
-          content="당신의 브랜드가 완성되는 공간"
         />
       </head>
       <body>

@@ -202,7 +202,7 @@ export default function page() {
         if (category === "all") return true;
         if (category === item.category) return true;
         return false;
-      })
+      }),
     );
   }, [category]);
 
@@ -245,6 +245,13 @@ export default function page() {
         <div className="story-contents__left">
           <p className="contents-title">CAREER</p>
           <ul>
+            <li>
+              <p>노크플레이스</p>
+              <p>IT</p>
+              <p>대표</p>
+              <p>2024. 7 ~ </p>
+              <p>기획·웹디자인·프론트엔드</p>
+            </li>
             <li>
               <p>스마트슬랩스</p>
               <p>IT</p>
@@ -304,6 +311,11 @@ export default function page() {
           <p className="contents-title">LISENSE</p>
           <ul>
             <li>
+              <p>SQLD</p>
+              <p>한국데이터산업진흥원</p>
+              <p>2024.03</p>
+            </li>
+            <li>
               <p>정보처리기사</p>
               <p>한국산업인력공단</p>
               <p>2022.09</p>
@@ -318,19 +330,11 @@ export default function page() {
               <p>한국산업인력공단</p>
               <p>2015.12</p>
             </li>
-            <li>
-              <p>컴퓨터활용능력 2급</p>
-              <p>대한상공회의소</p>
-              <p>2019.08</p>
-            </li>
           </ul>
         </div>
         <div className="story-contents__bottom-bottom">
           <p className="contents-title">ETC</p>
-          <p>
-            GTQ일러스트 1급, 그래픽기술자격(GTQ) 1급, 워드프로세스 1급, 1종보통
-            운전면허
-          </p>
+          <p>GTQ일러스트, GTQ그래픽기술자격</p>
         </div>
       </div>
     </div>
