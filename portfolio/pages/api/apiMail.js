@@ -5,9 +5,8 @@ const handler = async (req, res) => {
     const { method } = req;
     switch (method) {
       case "POST": {
-        //Do some thing
         await sendEmail(req.body.name, req.body.from, req.body.message);
-        return res.status(200).redirect(302, "/knockplace/home");
+        return res.status(200).json({ message: "success" });
       }
       case "GET": {
         //Do some thing
